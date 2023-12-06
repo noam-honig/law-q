@@ -30,7 +30,6 @@ export class VolunteerRequestComponent implements OnInit {
     } else {
       this.r.legalExpertise.push(e)
     }
-    console.log(this.r.legalExpertise)
   }
   chipSelected(e: any) {
     this.toggleExpertise(e.srcElement.innerText)
