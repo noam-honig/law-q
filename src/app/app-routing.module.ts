@@ -8,11 +8,13 @@ import { AdminGuard } from './users/AdminGuard'
 import { ShowDialogOnErrorErrorHandler } from './common/UIToolsService'
 import { terms } from './terms'
 import { HelpRequestsComponent } from './help-requests/help-requests.component'
+import { VolunteerRequestComponent } from './volunteer-request/volunteer-request.component'
 
 const defaultRoute = terms.home
 const routes: Routes = [
   { path: defaultRoute, component: HomeComponent },
   { path: HelpRequestsComponent.route, component: HelpRequestsComponent },
+  { path: 'הרשמה כעו"ד מתנדב', component: VolunteerRequestComponent },
   {
     path: terms.userAccounts,
     component: UsersComponent,

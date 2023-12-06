@@ -6,18 +6,22 @@ import { UpdatePasswordController } from '../app/users/UpdatePasswordController'
 import { initRequest } from './server-session'
 import { HelpRequest } from '../app/help-requests/HelpRequest'
 import { getPostgresSchemaManager } from './PostgresSchemaWrapper'
+import { remult } from 'remult'
 
 const entities = [User, HelpRequest]
 export const api = remultExpress({
   entities,
   controllers: [SignInController, UpdatePasswordController],
-  initRequest,
-  dataProvider: async () => {
+
+  initRequest: async (req) => {
+    await initRequest(req)
     if (process.env['NODE_ENV'] === 'production')
-      return getPostgresSchemaManager({
+      remult.dataProvider = await getPostgresSchemaManager({
         entities,
         disableSsl: false,
       }).getConnectionForSchema('lawq')
+  },
+  dataProvider: async () => {
     return undefined
   },
 })
