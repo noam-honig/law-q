@@ -27,6 +27,12 @@ export const api = remultExpress({
       remult.dataProvider = await db.getConnectionForSchema('lawq')
     await initRequest(req)
   },
+  contextSerializer: {
+    serialize: async () => ({}),
+    deserialize: async (json, options) => {
+      remult.dataProvider = await db.getConnectionForSchema('lawq')
+    },
+  },
   dataProvider: async () => {
     return undefined
   },
