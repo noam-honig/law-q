@@ -9,19 +9,23 @@ import { getPostgresSchemaManager } from './PostgresSchemaWrapper'
 import { remult } from 'remult'
 import { VersionInfo } from './version'
 import { VolunteerRequest } from '../app/volunteer-request/volunteer-request'
+import { config } from 'dotenv'
+config() //loads the configuration from the .env file
 
 const entities = [User, HelpRequest, VersionInfo, VolunteerRequest]
+const db = getPostgresSchemaManager({
+  entities,
+  disableSsl: false,
+})
+
 export const api = remultExpress({
   entities,
   controllers: [SignInController, UpdatePasswordController],
 
   initRequest: async (req) => {
+    if (process.env['DATABASE_URL'])
+      remult.dataProvider = await db.getConnectionForSchema('lawq')
     await initRequest(req)
-    if (process.env['NODE_ENV'] === 'production')
-      remult.dataProvider = await getPostgresSchemaManager({
-        entities,
-        disableSsl: false,
-      }).getConnectionForSchema('lawq')
   },
   dataProvider: async () => {
     return undefined
