@@ -12,13 +12,17 @@ import { HelpRequestsComponent } from './help-requests/help-requests.component'
 const defaultRoute = terms.home
 const routes: Routes = [
   { path: defaultRoute, component: HomeComponent },
-  { path: 'בקשה לסיוע משפטי', component: HelpRequestsComponent },
+  { path: HelpRequestsComponent.route, component: HelpRequestsComponent },
   {
     path: terms.userAccounts,
     component: UsersComponent,
     canActivate: [AdminGuard],
   },
-  { path: '**', redirectTo: '/' + defaultRoute, pathMatch: 'full' },
+  {
+    path: '**',
+    redirectTo: '/' + HelpRequestsComponent.route,
+    pathMatch: 'full',
+  },
 ]
 
 @NgModule({

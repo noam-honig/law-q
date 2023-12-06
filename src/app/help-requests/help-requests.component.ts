@@ -9,6 +9,7 @@ import { HelpRequest } from './HelpRequest'
   styleUrls: ['./help-requests.component.scss'],
 })
 export class HelpRequestsComponent implements OnInit {
+  static route = 'בקשה לסיוע משפטי'
   constructor() {}
   r = repo(HelpRequest).create()
   area = new DataAreaSettings({
