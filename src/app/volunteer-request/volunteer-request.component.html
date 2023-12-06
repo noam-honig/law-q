@@ -3,9 +3,9 @@
 
   <h3 *ngIf="!r.isNew()">בקשתך נתקבלה ומספרה {{ r.id }}</h3>
   <data-area [settings]="area" *ngIf="r.isNew()"></data-area>
-  <h3 *ngIf="!r.isNew()">תחומי התמחות:</h3>
+  <h3 *ngIf="r.isNew()">תחומי התמחות:</h3>
   <mat-chip-list
-    *ngIf="!r.isNew()"
+    *ngIf="r.isNew()"
     selectable
     multiple
     (click)="chipSelected($event)"
