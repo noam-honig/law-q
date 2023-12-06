@@ -1,0 +1,14 @@
+<app-card-in-middle>
+  <h2>שאלה משפטית</h2>
+
+  <h3 *ngIf="!r.isNew()">בקשתך נתקבלה ומספרה {{ r.id }}</h3>
+  <data-area [settings]="area" *ngIf="r.isNew()"></data-area>
+  <button
+    mat-raised-button
+    color="primary"
+    *ngIf="r.isNew()"
+    (click)="submit()"
+  >
+    שלח
+  </button>
+</app-card-in-middle>

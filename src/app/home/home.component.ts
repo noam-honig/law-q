@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'
-import { Fields, getFields } from 'remult'
+import { Fields, getFields, repo } from 'remult'
 import { DataAreaSettings } from '../common-ui-elements/interfaces'
+import { HelpRequest } from '../help-requests/HelpRequest'
 
 @Component({
   selector: 'app-home',

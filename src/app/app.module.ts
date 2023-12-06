@@ -29,6 +29,8 @@ import { DotsMenuComponent } from './common/dot-menu.component'
 import { AddressInputComponent } from './common/address-input/address-input.component'
 import { MultiSelectListDialogComponent } from './common/multi-select-list-dialog/multi-select-list-dialog.component'
 import { InputImageComponent } from './common/input-image/input-image.component'
+import { HelpRequestsComponent } from './help-requests/help-requests.component'
+import { CardInMiddleComponent } from './common/card-in-middle/card-in-middle.component'
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { InputImageComponent } from './common/input-image/input-image.component'
     DotsMenuComponent,
     MultiSelectListDialogComponent,
     InputImageComponent,
+    HelpRequestsComponent,
+    CardInMiddleComponent,
   ],
   imports: [
     BrowserModule,

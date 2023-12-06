@@ -7,10 +7,12 @@ import { UsersComponent } from './users/users.component'
 import { AdminGuard } from './users/AdminGuard'
 import { ShowDialogOnErrorErrorHandler } from './common/UIToolsService'
 import { terms } from './terms'
+import { HelpRequestsComponent } from './help-requests/help-requests.component'
 
 const defaultRoute = terms.home
 const routes: Routes = [
   { path: defaultRoute, component: HomeComponent },
+  { path: 'בקשה לסיוע משפטי', component: HelpRequestsComponent },
   {
     path: terms.userAccounts,
     component: UsersComponent,
