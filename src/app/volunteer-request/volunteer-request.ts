@@ -58,7 +58,7 @@ export class VolunteerRequest extends EntityBase {
         throw Error('חובה לבחור לפחות תחום התמחות אחד')
     },
   })
-  practiceAreas: string[] = []
+  legalExpertise: string[] = []
   @Fields.string({
     caption: 'מידע רלוונטי אחר',
     customInput: (e) => e.textarea(),

@@ -3,6 +3,7 @@ import { PhoneField } from '../common/fields/PhoneField'
 import { EmailField } from '../common/fields/EmailField'
 import { ValueListField } from '../common/fields/ValueListField'
 import { recordChanges } from '../common/change-log/change-log'
+import { legalExpertise } from './legal-expertise'
 
 @Entity('HelpRequests', {
   allowApiCrud: Allow.authenticated,
@@ -22,43 +23,10 @@ export class HelpRequest extends EntityBase {
   phone = ''
   @Fields.string({ caption: 'עיר', validate: [Validators.required] })
   city = ''
-  @ValueListField(
-    [
-      'דיני עבודה',
-      'נזיקין (נזקי גוף ורכוש)',
-      'מיסוי',
-      'ביטוח לאומי',
-      'פיצוי כללי',
-      'הכרה ממשלתית כנפגע פעולות איבה או הכרה של צה”ל בחייל כנכה  צה”ל',
-      'אימות נוטריוני',
-      'אימות תצהיר',
-      'אחר',
-      'ערעורים',
-      'פשיטת רגל והוצאה לפועל',
-      'זכויות אזרחיות',
-      'צרכנות',
-      'מסחרי',
-      'רשומות פליליות וביטחון',
-      'דיני פרטיות',
-      'ישוב סכסוכים',
-      'חינוך',
-      'דיני הגנת הסביבה',
-      'דיני משפחה',
-      'כספים',
-      'ממשל',
-      'אפוטרופסות',
-      'בריאות',
-      'דיור',
-      'זכויות אדם',
-      'הגירה ומקלט מדיני',
-      'קנין רוחני',
-      'משפט בינלאומי',
-      'זכויות ציבור ורווחה',
-      'משפט ציבורי',
-      'נדל”ן',
-    ],
-    { caption: 'תחום משפטי', validate: [Validators.required] }
-  )
+  @ValueListField(legalExpertise, {
+    caption: 'תחום משפטי',
+    validate: [Validators.required],
+  })
   legalField = ''
   @Fields.string({ caption: 'כותרת', validate: [Validators.required] })
   title = ''

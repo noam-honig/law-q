@@ -8,8 +8,9 @@ import { HelpRequest } from '../app/help-requests/HelpRequest'
 import { getPostgresSchemaManager } from './PostgresSchemaWrapper'
 import { remult } from 'remult'
 import { VersionInfo } from './version'
+import { VolunteerRequest } from '../app/volunteer-request/volunteer-request'
 
-const entities = [User, HelpRequest, VersionInfo]
+const entities = [User, HelpRequest, VersionInfo, VolunteerRequest]
 export const api = remultExpress({
   entities,
   controllers: [SignInController, UpdatePasswordController],

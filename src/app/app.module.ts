@@ -30,8 +30,9 @@ import { AddressInputComponent } from './common/address-input/address-input.comp
 import { MultiSelectListDialogComponent } from './common/multi-select-list-dialog/multi-select-list-dialog.component'
 import { InputImageComponent } from './common/input-image/input-image.component'
 import { HelpRequestsComponent } from './help-requests/help-requests.component'
-import { CardInMiddleComponent } from './common/card-in-middle/card-in-middle.component';
+import { CardInMiddleComponent } from './common/card-in-middle/card-in-middle.component'
 import { VolunteerRequestComponent } from './volunteer-request/volunteer-request.component'
+import { MatChipsModule } from '@angular/material/chips'
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { VolunteerRequestComponent } from './volunteer-request/volunteer-request
     MatCardModule,
     MatDialogModule,
     MatSnackBarModule,
+    MatChipsModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,

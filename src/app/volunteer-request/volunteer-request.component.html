@@ -3,6 +3,14 @@
 
   <h3 *ngIf="!r.isNew()">בקשתך נתקבלה ומספרה {{ r.id }}</h3>
   <data-area [settings]="area" *ngIf="r.isNew()"></data-area>
+  <h3>תחומי התמחות:</h3>
+  <mat-chip-list selectable multiple (click)="chipSelected($event)">
+    <mat-chip
+      *ngFor="let l of legalExpertise"
+      [selected]="r.legalExpertise.includes(l)"
+      >{{ l }}</mat-chip
+    >
+  </mat-chip-list>
   <button
     mat-raised-button
     color="primary"
