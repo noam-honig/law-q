@@ -4,17 +4,24 @@ import { EmailField } from '../common/fields/EmailField'
 import { PhoneField } from '../common/fields/PhoneField'
 import { ValueListField } from '../common/fields/ValueListField'
 import { recordChanges } from '../common/change-log/change-log'
+import { CreatedAtField } from '../help-requests/utils/date'
 
-@Entity('VolunteerRequests', {
+@Entity<VolunteerRequest>('VolunteerRequests', {
   allowApiCrud: Allow.authenticated,
   allowApiInsert: true,
+  allowApiDelete: false,
+  defaultOrderBy: {
+    createdAt: 'desc',
+  },
   saving: async (self, e) => {
     await recordChanges(self, e)
   },
 })
 export class VolunteerRequest extends EntityBase {
-  @Fields.autoIncrement()
+  @Fields.autoIncrement({ caption: '#', width: '70' })
   id = 0
+  @CreatedAtField({ caption: 'תאריך פניה' })
+  createdAt = new Date()
   @NameField()
   name = ''
   @Fields.string({

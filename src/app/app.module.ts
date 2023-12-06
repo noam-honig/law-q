@@ -32,7 +32,9 @@ import { InputImageComponent } from './common/input-image/input-image.component'
 import { HelpRequestsComponent } from './help-requests/help-requests.component'
 import { CardInMiddleComponent } from './common/card-in-middle/card-in-middle.component'
 import { VolunteerRequestComponent } from './volunteer-request/volunteer-request.component'
-import { MatChipsModule } from '@angular/material/chips'
+import { MatChipsModule } from '@angular/material/chips';
+import { AllHelpRequestsComponent } from './all-help-requests/all-help-requests.component';
+import { AllVolunteerRequestsComponent } from './all-volunteer-requests/all-volunteer-requests.component'
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { MatChipsModule } from '@angular/material/chips'
     HelpRequestsComponent,
     CardInMiddleComponent,
     VolunteerRequestComponent,
+    AllHelpRequestsComponent,
+    AllVolunteerRequestsComponent,
   ],
   imports: [
     BrowserModule,

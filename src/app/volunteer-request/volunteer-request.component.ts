@@ -16,7 +16,9 @@ export class VolunteerRequestComponent implements OnInit {
   area = new DataAreaSettings({
     fields: () =>
       this.r.$.toArray().filter(
-        (x) => ![this.r.$.id, this.r.$.legalExpertise].includes(x)
+        (x) =>
+          ![this.r.$.legalExpertise].includes(x) &&
+          x.metadata.apiUpdateAllowed()
       ),
   })
   legalExpertise = legalExpertise

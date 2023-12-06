@@ -4,17 +4,24 @@ import { EmailField } from '../common/fields/EmailField'
 import { ValueListField } from '../common/fields/ValueListField'
 import { recordChanges } from '../common/change-log/change-log'
 import { legalExpertise } from './legal-expertise'
+import { CreatedAtField } from './utils/date'
 
-@Entity('HelpRequests', {
+@Entity<HelpRequest>('HelpRequests', {
   allowApiCrud: Allow.authenticated,
   allowApiInsert: true,
+  allowApiDelete: false,
+  defaultOrderBy: {
+    createdAt: 'desc',
+  },
   saving: async (user, e) => {
     await recordChanges(user, e)
   },
 })
 export class HelpRequest extends EntityBase {
-  @Fields.autoIncrement()
+  @Fields.autoIncrement({ caption: '#', width: '70' })
   id = 0
+  @CreatedAtField({ caption: 'תאריך פניה' })
+  createdAt = new Date()
   @NameField()
   name = ''
   @EmailField({ validate: [Validators.required] })

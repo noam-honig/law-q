@@ -13,7 +13,8 @@ export class HelpRequestsComponent implements OnInit {
   constructor() {}
   r = repo(HelpRequest).create()
   area = new DataAreaSettings({
-    fields: () => this.r.$.toArray().filter((x) => x != this.r.$.id),
+    fields: () =>
+      this.r.$.toArray().filter((x) => x.metadata.apiUpdateAllowed()),
   })
   ngOnInit(): void {}
   async submit() {
