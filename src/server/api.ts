@@ -21,19 +21,10 @@ const db = getPostgresSchemaManager({
 export const api = remultExpress({
   entities,
   controllers: [SignInController, UpdatePasswordController],
-
-  initRequest: async (req) => {
-    if (process.env['DATABASE_URL'])
-      remult.dataProvider = await db.getConnectionForSchema('lawq')
-    await initRequest(req)
-  },
-  contextSerializer: {
-    serialize: async () => ({}),
-    deserialize: async (json, options) => {
-      remult.dataProvider = await db.getConnectionForSchema('lawq')
-    },
-  },
+  initRequest,
   dataProvider: async () => {
+    if (process.env['DATABASE_URL'])
+      return await db.getConnectionForSchema('lawq')
     return undefined
   },
 })
