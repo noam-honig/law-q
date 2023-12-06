@@ -14,18 +14,7 @@ import { recordChanges } from '../common/change-log/change-log'
 export class HelpRequest extends EntityBase {
   @Fields.autoIncrement()
   id = 0
-  @Fields.string({
-    caption: 'שם מלא',
-    validate: [
-      Validators.required,
-      (_, v) => {
-        // verify that the name has two words with at least two characters
-        if (!v.value.match(/^[א-ת]{2,} [א-ת]{2,}$/)) {
-          throw Error('נא להזין שם ושם משפחה')
-        }
-      },
-    ],
-  })
+  @NameField()
   name = ''
   @EmailField({ validate: [Validators.required] })
   email = ''
@@ -84,4 +73,19 @@ export class HelpRequest extends EntityBase {
     validate: [Validators.required],
   })
   contactMethod = ''
+}
+
+export function NameField() {
+  return Fields.string({
+    caption: 'שם מלא',
+    validate: [
+      Validators.required,
+      (_, v) => {
+        // verify that the name has two words with at least two characters
+        if (!v.value.match(/^[א-ת]{2,} [א-ת]{2,}$/)) {
+          throw Error('נא להזין שם ושם משפחה')
+        }
+      },
+    ],
+  })
 }
