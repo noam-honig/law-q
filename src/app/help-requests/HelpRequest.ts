@@ -64,7 +64,10 @@ export class HelpRequest extends EntityBase {
   contactMethod = ''
   @ValueListField(helpRequestStatuses, { caption: 'סטטוס' })
   status: (typeof helpRequestStatuses)[number] = 'חדשה'
-  @Relations.toOne(() => Volunteer, { caption: 'מתנדב משוייך' })
+  @Relations.toOne(() => Volunteer, {
+    caption: 'מתנדב משוייך',
+    allowNull: true,
+  })
   volunteer?: Volunteer
 }
 

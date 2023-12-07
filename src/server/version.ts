@@ -1,4 +1,12 @@
-import { Entity, Fields, IdEntity, remult, repo, SqlDatabase } from 'remult'
+import {
+  dbNamesOf,
+  Entity,
+  Fields,
+  IdEntity,
+  remult,
+  repo,
+  SqlDatabase,
+} from 'remult'
 import { Volunteer } from '../app/volunteer-request/volunteer-request'
 import { HelpRequest } from '../app/help-requests/HelpRequest'
 
@@ -38,6 +46,14 @@ export async function versionUpdate() {
       r.status = 'חדשה'
       r.legalField = ''
       await r.save()
+    }
+  })
+  await version(6, async () => {
+    if (remult.dataProvider instanceof SqlDatabase) {
+      const h = await dbNamesOf(repo(HelpRequest))
+      await (remult.dataProvider as SqlDatabase).execute(
+        `ALTER TABLE ${h} ALTER COLUMN ${h.volunteer} DROP NOT NULL`
+      )
     }
   })
 }
