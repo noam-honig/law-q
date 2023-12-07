@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { VolunteerRequest } from './volunteer-request'
+import { Volunteer } from './volunteer-request'
 import { repo } from 'remult'
 import { DataAreaSettings } from '../common-ui-elements/interfaces'
 import { legalExpertise } from '../help-requests/legal-expertise'
@@ -12,7 +12,7 @@ import { legalExpertise } from '../help-requests/legal-expertise'
 export class VolunteerRequestComponent implements OnInit {
   constructor() {}
 
-  r = repo(VolunteerRequest).create()
+  r = repo(Volunteer).create()
   area = new DataAreaSettings({
     fields: () =>
       this.r.$.toArray().filter(

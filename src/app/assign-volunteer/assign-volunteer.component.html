@@ -1,0 +1,48 @@
+<div style="display: flex">
+  <div style="display: flex; flex-direction: column; flex-grow: 1">
+    <strong>{{ r.title }}</strong>
+    <mat-card-subtitle
+      >{{ r.name }} {{ r.city }} נשלח ב:{{
+        r.$.createdAt.displayValue
+      }}</mat-card-subtitle
+    >
+    <mat-card-content>{{ r.description }}</mat-card-content>
+    <mat-form-field>
+      <input
+        matInput
+        [(ngModel)]="searchString"
+        [ngModelOptions]="{ standalone: true }"
+        placeholder="חיפוש "
+      />
+    </mat-form-field>
+  </div>
+  <button mat-icon-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<mat-dialog-content>
+  <div class="scrollable-content">
+    <table class="table">
+      <tbody>
+        <ng-container *ngFor="let v of volunteers">
+          <tr *ngIf="filter(v)" (click)="selectedVolunteer = v">
+            <td>
+              <mat-checkbox
+                [checked]="selectedVolunteer === v"
+                (click)="selectedVolunteer = v; $event.preventDefault()"
+              ></mat-checkbox>
+            </td>
+            <td>{{ v.name }}</td>
+            <td>{{ v.city }}</td>
+            <td>{{ v.legalExpertise }}</td>
+            <td>{{ v.notes }}</td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="assign()">שייך</button>
+</mat-dialog-actions>

@@ -11,10 +11,17 @@ import { HelpRequestsComponent } from './help-requests/help-requests.component'
 import { VolunteerRequestComponent } from './volunteer-request/volunteer-request.component'
 import { AllHelpRequestsComponent } from './all-help-requests/all-help-requests.component'
 import { AllVolunteerRequestsComponent } from './all-volunteer-requests/all-volunteer-requests.component'
+import { ProcessRequestsComponent } from './process-requests/process-requests.component'
+import { DevComponent } from './dev/dev.component'
 
 const defaultRoute = terms.home
 const routes: Routes = [
   { path: defaultRoute, component: HomeComponent },
+  {
+    path: 'טיפול בבקשות',
+    component: ProcessRequestsComponent,
+    canActivate: [AuthenticatedGuard],
+  },
   {
     path: 'בקשות סיוע',
     component: AllHelpRequestsComponent,
@@ -31,6 +38,12 @@ const routes: Routes = [
     path: terms.userAccounts,
     component: UsersComponent,
     canActivate: [AdminGuard],
+  },
+  {
+    path: 'dev',
+    component: DevComponent,
+    canActivate: [AdminGuard],
+    data: { hide: true },
   },
   {
     path: '**',

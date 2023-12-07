@@ -1,0 +1,60 @@
+<div>
+  <form>
+    <div *ngFor="let option of options">
+      <input
+        type="radio"
+        [value]="option"
+        [formControl]="selectedOption"
+        [id]="option"
+      />
+      <label [for]="option">{{ option }}</label>
+    </div>
+  </form>
+  <div class="events-container">
+    <mat-card *ngFor="let r of requests$ | async" class="event-card">
+      <div style="display: flex">
+        <div style="flex-grow: 1">
+          <strong>{{ r.title }}</strong>
+          <mat-card-subtitle
+            >{{ r.name }} {{ r.city }} נשלחה ב:{{
+              r.$.createdAt.displayValue
+            }}</mat-card-subtitle
+          >
+        </div>
+        <button mat-icon-button (click)="edit(r)">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </div>
+      <mat-card-content>
+        <div style="margin-bottom: 10px">
+          {{ r.description }}
+        </div>
+        <strong>פרטי קשר</strong>
+        <app-display-phone
+          [phone]="r.phone"
+          [message]="messageToPerson(r)"
+        ></app-display-phone>
+        <div>
+          <a [href]="emailToPerson(r)">{{ r.email }}</a>
+        </div>
+        <div *ngIf="r.volunteer">
+          <strong>עו"ד: {{ r.volunteer.name }}</strong>
+          <app-display-phone
+            [phone]="r.volunteer.phone"
+            [message]="messageToLawyer(r)"
+          ></app-display-phone>
+          <div>
+            <a [href]="emailToLawyer(r)">{{ r.volunteer.email }}</a>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <ng-container *ngFor="let b of buttons">
+          <button mat-button (click)="b.click(r)" *ngIf="b.visible?.(r)">
+            {{ b.name }}
+          </button>
+        </ng-container>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

@@ -1,10 +1,25 @@
-import { Allow, Entity, EntityBase, Fields, Validators } from 'remult'
+import {
+  Allow,
+  Entity,
+  EntityBase,
+  Fields,
+  Relations,
+  Validators,
+} from 'remult'
 import { PhoneField } from '../common/fields/PhoneField'
 import { EmailField } from '../common/fields/EmailField'
 import { ValueListField } from '../common/fields/ValueListField'
 import { recordChanges } from '../common/change-log/change-log'
 import { legalExpertise } from './legal-expertise'
 import { CreatedAtField } from './utils/date'
+import { Volunteer } from '../volunteer-request/volunteer-request'
+
+export const helpRequestStatuses = [
+  'חדשה',
+  'ממתינה לשיוך',
+  'שוייכה',
+  'נדחתה',
+] as const
 
 @Entity<HelpRequest>('HelpRequests', {
   allowApiCrud: Allow.authenticated,
@@ -47,6 +62,10 @@ export class HelpRequest extends EntityBase {
     validate: [Validators.required],
   })
   contactMethod = ''
+  @ValueListField(helpRequestStatuses, { caption: 'סטטוס' })
+  status: (typeof helpRequestStatuses)[number] = 'חדשה'
+  @Relations.toOne(() => Volunteer, { caption: 'מתנדב משוייך' })
+  volunteer?: Volunteer
 }
 
 export function NameField() {

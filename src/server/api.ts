@@ -1,39 +1,35 @@
 import { remultExpress } from 'remult/remult-express'
-import { createPostgresConnection } from 'remult/postgres'
+import { PostgresDataProvider, PostgresSchemaBuilder } from 'remult/postgres'
 import { User } from '../app/users/user'
 import { SignInController } from '../app/users/SignInController'
 import { UpdatePasswordController } from '../app/users/UpdatePasswordController'
 import { initRequest } from './server-session'
 import { HelpRequest } from '../app/help-requests/HelpRequest'
-import { getPostgresSchemaManager } from './PostgresSchemaWrapper'
-import { remult } from 'remult'
-import { VersionInfo } from './version'
-import { VolunteerRequest } from '../app/volunteer-request/volunteer-request'
+import {
+  PostgresSchemaWrapper,
+  createPostgresSchemaDataProvider,
+} from './PostgresSchemaWrapper'
+import { SqlDatabase, remult } from 'remult'
+import { VersionInfo, versionUpdate } from './version'
+import { Volunteer } from '../app/volunteer-request/volunteer-request'
 import { config } from 'dotenv'
+import { Pool } from 'pg'
 config() //loads the configuration from the .env file
 
-const entities = [User, HelpRequest, VersionInfo, VolunteerRequest]
-const db = getPostgresSchemaManager({
-  entities,
-  disableSsl: false,
-})
+const entities = [User, HelpRequest, VersionInfo, Volunteer]
 
 export const api = remultExpress({
   entities,
   controllers: [SignInController, UpdatePasswordController],
-
-  initRequest: async (req) => {
-    if (process.env['DATABASE_URL'])
-      remult.dataProvider = await db.getConnectionForSchema('lawq')
-    await initRequest(req)
-  },
-  contextSerializer: {
-    serialize: async () => ({}),
-    deserialize: async (json, options) => {
-      remult.dataProvider = await db.getConnectionForSchema('lawq')
-    },
-  },
   dataProvider: async () => {
-    return undefined
+    if (!process.env['DATABASE_URL']) return undefined
+    return createPostgresSchemaDataProvider({
+      schema: 'lawq',
+      connectionString: process.env['DATABASE_URL'],
+    })
+  },
+  initRequest,
+  initApi: async () => {
+    await versionUpdate()
   },
 })

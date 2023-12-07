@@ -2,7 +2,7 @@ import { APP_INITIALIZER, NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatListModule } from '@angular/material/list'
 import { MatToolbarModule } from '@angular/material/toolbar'
@@ -32,9 +32,13 @@ import { InputImageComponent } from './common/input-image/input-image.component'
 import { HelpRequestsComponent } from './help-requests/help-requests.component'
 import { CardInMiddleComponent } from './common/card-in-middle/card-in-middle.component'
 import { VolunteerRequestComponent } from './volunteer-request/volunteer-request.component'
-import { MatChipsModule } from '@angular/material/chips';
-import { AllHelpRequestsComponent } from './all-help-requests/all-help-requests.component';
+import { MatChipsModule } from '@angular/material/chips'
+import { AllHelpRequestsComponent } from './all-help-requests/all-help-requests.component'
 import { AllVolunteerRequestsComponent } from './all-volunteer-requests/all-volunteer-requests.component'
+import { ProcessRequestsComponent } from './process-requests/process-requests.component';
+import { AssignVolunteerComponent } from './assign-volunteer/assign-volunteer.component';
+import { DevComponent } from './dev/dev.component';
+import { DisplayPhoneComponent } from './display-phone/display-phone.component'
 
 @NgModule({
   declarations: [
@@ -53,11 +57,16 @@ import { AllVolunteerRequestsComponent } from './all-volunteer-requests/all-volu
     VolunteerRequestComponent,
     AllHelpRequestsComponent,
     AllVolunteerRequestsComponent,
+    ProcessRequestsComponent,
+    AssignVolunteerComponent,
+    DevComponent,
+    DisplayPhoneComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,

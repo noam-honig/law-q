@@ -6,7 +6,7 @@ import { ValueListField } from '../common/fields/ValueListField'
 import { recordChanges } from '../common/change-log/change-log'
 import { CreatedAtField } from '../help-requests/utils/date'
 
-@Entity<VolunteerRequest>('VolunteerRequests', {
+@Entity<Volunteer>('Volunteers', {
   allowApiCrud: Allow.authenticated,
   allowApiInsert: true,
   allowApiDelete: false,
@@ -17,7 +17,7 @@ import { CreatedAtField } from '../help-requests/utils/date'
     await recordChanges(self, e)
   },
 })
-export class VolunteerRequest extends EntityBase {
+export class Volunteer extends EntityBase {
   @Fields.autoIncrement({ caption: '#', width: '70' })
   id = 0
   @CreatedAtField({ caption: 'תאריך פניה' })
@@ -58,7 +58,7 @@ export class VolunteerRequest extends EntityBase {
   doYouHaveInsurance = ''
   @Fields.string({ caption: 'מעסיק', validate: [Validators.required] })
   employer = ''
-  @Fields.json<VolunteerRequest, string[]>({
+  @Fields.json<Volunteer, string[]>({
     caption: 'תחומי התמחות',
     validate: (_, f) => {
       if ((f.value?.length || 0) == 0)
@@ -72,3 +72,5 @@ export class VolunteerRequest extends EntityBase {
   })
   notes = ''
 }
+
+const testData: Volunteer[] = []

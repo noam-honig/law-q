@@ -7,6 +7,29 @@ import {
 } from 'remult/postgres'
 import { versionUpdate } from './version'
 
+export function createPostgresSchemaDataProvider(args: {
+  connectionString?: string
+  disableSsl?: boolean
+  schema: string
+}) {
+  const db = new SqlDatabase(
+    new PostgresDataProvider(
+      new PostgresSchemaWrapper(
+        new Pool({
+          connectionString: process.env['DATABASE_URL'],
+          ssl: {
+            rejectUnauthorized: false, //needed for heroku
+          },
+        }),
+        'lawq'
+      )
+    )
+  )
+  const sb = new PostgresSchemaBuilder(db, 'lawq')
+  db.ensureSchema = (entities) => sb.ensureSchema(entities)
+  return db
+}
+
 export class PostgresSchemaWrapper implements PostgresPool {
   constructor(private pool: Pool, private schema: string) {}
 

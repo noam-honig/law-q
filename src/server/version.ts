@@ -1,4 +1,6 @@
-import { Entity, Fields, IdEntity, remult, SqlDatabase } from 'remult'
+import { Entity, Fields, IdEntity, remult, repo, SqlDatabase } from 'remult'
+import { Volunteer } from '../app/volunteer-request/volunteer-request'
+import { HelpRequest } from '../app/help-requests/HelpRequest'
 
 @Entity(undefined!, {
   dbName: 'versionInfo',
@@ -31,5 +33,11 @@ export async function versionUpdate() {
     }
   }
 
-  await version(1, async () => {})
+  await version(5, async () => {
+    for (const r of await repo(HelpRequest).find()) {
+      r.status = 'חדשה'
+      r.legalField = ''
+      await r.save()
+    }
+  })
 }
