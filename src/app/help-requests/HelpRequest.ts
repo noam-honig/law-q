@@ -32,7 +32,6 @@ export class HelpRequest extends EntityBase {
   city = ''
   @ValueListField(legalExpertise, {
     caption: 'תחום משפטי',
-    validate: [Validators.required],
   })
   legalField = ''
   @Fields.string({ caption: 'כותרת', validate: [Validators.required] })
