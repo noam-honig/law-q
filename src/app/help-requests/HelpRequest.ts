@@ -77,9 +77,9 @@ export function NameField() {
     validate: [
       Validators.required,
       (_, v) => {
-        // verify that the name has two words with at least two characters
-        if (!v.value.match(/^[א-ת]{2,} [א-ת]{2,}$/)) {
-          throw Error('נא להזין שם ושם משפחה')
+        const words = v.value.split(' ')
+        if (words.length < 2) {
+          throw new Error('נא להזין שם ושם משפחה')
         }
       },
     ],
