@@ -14,9 +14,10 @@ import { VersionInfo, versionUpdate } from './version'
 import { Volunteer } from '../app/volunteer-request/volunteer-request'
 import { config } from 'dotenv'
 import { Pool } from 'pg'
+import { ChangeLog } from '../app/common/change-log/change-log'
 config() //loads the configuration from the .env file
 
-const entities = [User, HelpRequest, VersionInfo, Volunteer]
+const entities = [User, HelpRequest, VersionInfo, Volunteer, ChangeLog]
 
 export const api = remultExpress({
   entities,
