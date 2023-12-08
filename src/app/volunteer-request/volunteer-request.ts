@@ -1,5 +1,5 @@
 import { Allow, Entity, EntityBase, Fields, Validators } from 'remult'
-import { NameField } from '../help-requests/HelpRequest'
+import { NameField } from '../help-requests/NameField'
 import { EmailField } from '../common/fields/EmailField'
 import { PhoneField } from '../common/fields/PhoneField'
 import { ValueListField } from '../common/fields/ValueListField'

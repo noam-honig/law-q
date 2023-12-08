@@ -13,6 +13,7 @@ import { recordChanges } from '../common/change-log/change-log'
 import { legalExpertise } from './legal-expertise'
 import { CreatedAtField } from './utils/date'
 import { Volunteer } from '../volunteer-request/volunteer-request'
+import { NameField } from './NameField'
 
 export const helpRequestStatuses = [
   'חדשה',
@@ -64,24 +65,10 @@ export class HelpRequest extends EntityBase {
   contactMethod = ''
   @ValueListField(helpRequestStatuses, { caption: 'סטטוס' })
   status: (typeof helpRequestStatuses)[number] = 'חדשה'
+
   @Relations.toOne(() => Volunteer, {
     caption: 'מתנדב משוייך',
     allowNull: true,
   })
   volunteer?: Volunteer
-}
-
-export function NameField() {
-  return Fields.string({
-    caption: 'שם מלא',
-    validate: [
-      Validators.required,
-      (_, v) => {
-        const words = v.value.split(' ')
-        if (words.length < 2) {
-          throw new Error('נא להזין שם ושם משפחה')
-        }
-      },
-    ],
-  })
 }
