@@ -1,0 +1,1704 @@
+[
+  {
+    "id": "8a88bb44-c71a-45c7-a414-38e7f02fa506",
+    "relatedId": "0",
+    "relatedName": "נועם הנחג",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-06T10:48:02.665Z",
+    "userId": "51819e6f-f985-464c-8869-4f08584b4a60",
+    "userName": "noam",
+    "changes": [
+      {
+        "key": "name",
+        "newDisplayValue": "נועם הנחג",
+        "oldDisplayValue": "",
+        "newValue": "נועם הנחג",
+        "oldValue": ""
+      },
+      {
+        "key": "email",
+        "newDisplayValue": "noam.honig@gmail.com",
+        "oldDisplayValue": "",
+        "newValue": "noam.honig@gmail.com",
+        "oldValue": ""
+      },
+      {
+        "key": "phone",
+        "newDisplayValue": "050-733-0590",
+        "oldDisplayValue": "",
+        "newValue": "0507330590",
+        "oldValue": ""
+      },
+      {
+        "key": "city",
+        "newDisplayValue": "הרצלים",
+        "oldDisplayValue": "",
+        "newValue": "הרצלים",
+        "oldValue": ""
+      },
+      {
+        "key": "legalField",
+        "newDisplayValue": "דיני עבודה",
+        "oldDisplayValue": "",
+        "newValue": "דיני עבודה",
+        "oldValue": ""
+      },
+      {
+        "key": "title",
+        "newDisplayValue": "123",
+        "oldDisplayValue": "",
+        "newValue": "123",
+        "oldValue": ""
+      },
+      {
+        "key": "description",
+        "newDisplayValue": "123",
+        "oldDisplayValue": "",
+        "newValue": "123",
+        "oldValue": ""
+      },
+      {
+        "key": "contactMethod",
+        "newDisplayValue": "אימייל",
+        "oldDisplayValue": "",
+        "newValue": "אימייל",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "name",
+      "email",
+      "phone",
+      "city",
+      "legalField",
+      "title",
+      "description",
+      "contactMethod"
+    ]
+  },
+  {
+    "id": "504bd3a9-3fe7-4643-87ae-cf6a01a9c9d3",
+    "relatedId": "0",
+    "relatedName": "נועם הניג",
+    "entity": "VolunteerRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-06T12:31:39.897Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "name",
+        "newDisplayValue": "נועם הניג",
+        "oldDisplayValue": "",
+        "newValue": "נועם הניג",
+        "oldValue": ""
+      },
+      {
+        "key": "idNumber",
+        "newDisplayValue": "038725222",
+        "oldDisplayValue": "",
+        "newValue": "038725222",
+        "oldValue": ""
+      },
+      {
+        "key": "licenseNumber",
+        "newDisplayValue": "123456",
+        "oldDisplayValue": "",
+        "newValue": "123456",
+        "oldValue": ""
+      },
+      {
+        "key": "email",
+        "newDisplayValue": "noam.honig@gmail.com",
+        "oldDisplayValue": "",
+        "newValue": "noam.honig@gmail.com",
+        "oldValue": ""
+      },
+      {
+        "key": "phone",
+        "newDisplayValue": "050-733-0590",
+        "oldDisplayValue": "",
+        "newValue": "0507330590",
+        "oldValue": ""
+      },
+      {
+        "key": "city",
+        "newDisplayValue": "אבן יהודה",
+        "oldDisplayValue": "",
+        "newValue": "אבן יהודה",
+        "oldValue": ""
+      },
+      {
+        "key": "doYouHaveInsurance",
+        "newDisplayValue": "כן",
+        "oldDisplayValue": "",
+        "newValue": "כן",
+        "oldValue": ""
+      },
+      {
+        "key": "employer",
+        "newDisplayValue": "פאיירפאלי",
+        "oldDisplayValue": "",
+        "newValue": "פאיירפאלי",
+        "oldValue": ""
+      },
+      {
+        "key": "legalExpertise",
+        "newDisplayValue": [
+          "אימות תצהיר",
+          "פשיטת רגל והוצאה לפועל",
+          "דיני עבודה"
+        ],
+        "oldDisplayValue": "",
+        "newValue": [
+          "אימות תצהיר",
+          "פשיטת רגל והוצאה לפועל",
+          "דיני עבודה"
+        ],
+        "oldValue": ""
+      },
+      {
+        "key": "notes",
+        "newDisplayValue": "שדדכדג",
+        "oldDisplayValue": "",
+        "newValue": "שדדכדג",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "name",
+      "idNumber",
+      "licenseNumber",
+      "email",
+      "phone",
+      "city",
+      "doYouHaveInsurance",
+      "employer",
+      "legalExpertise",
+      "notes"
+    ]
+  },
+  {
+    "id": "a4c759cc-5e2f-4931-b762-7d95af2a9477",
+    "relatedId": "1",
+    "relatedName": "נועם הניג",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-06T15:58:39.223Z",
+    "userId": "51819e6f-f985-464c-8869-4f08584b4a60",
+    "userName": "noam",
+    "changes": [
+      {
+        "key": "name",
+        "newDisplayValue": "נועם הניג",
+        "oldDisplayValue": "נועם הנחג",
+        "newValue": "נועם הניג",
+        "oldValue": "נועם הנחג"
+      }
+    ],
+    "changedFields": [
+      "name"
+    ]
+  },
+  {
+    "id": "12af33a2-e12c-4976-a24f-db57adcecd34",
+    "relatedId": "21",
+    "relatedName": "נועם הניג",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:54:47.497Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "d2d8ba94-01c6-4bae-952f-d18afea16603",
+    "relatedId": "22",
+    "relatedName": "אביגיל כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:54:47.503Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "f24037c4-1922-4a92-b833-21eeaa2db7c9",
+    "relatedId": "1",
+    "relatedName": "שרה לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:54:47.506Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "3e0d822f-a77c-4154-99a2-ca6689010327",
+    "relatedId": "2",
+    "relatedName": "דניאל כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:54:47.511Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "af1772dd-b65c-4ce7-a91d-f0c336f5cb22",
+    "relatedId": "21",
+    "relatedName": "נועם הניג",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.782Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני עבודה",
+        "newValue": "",
+        "oldValue": "דיני עבודה"
+      }
+    ],
+    "changedFields": [
+      "legalField"
+    ]
+  },
+  {
+    "id": "a45a12d9-cdc5-4d85-8f87-a75f38f2a0df",
+    "relatedId": "22",
+    "relatedName": "אביגיל כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.789Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני משפחה",
+        "newValue": "",
+        "oldValue": "דיני משפחה"
+      }
+    ],
+    "changedFields": [
+      "legalField"
+    ]
+  },
+  {
+    "id": "01990954-0171-4446-95ed-daa2d5c6d5a7",
+    "relatedId": "1",
+    "relatedName": "שרה לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.795Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני משפחה",
+        "newValue": "",
+        "oldValue": "דיני משפחה"
+      }
+    ],
+    "changedFields": [
+      "legalField"
+    ]
+  },
+  {
+    "id": "f906ff5c-fa71-4176-9226-702eefdac730",
+    "relatedId": "2",
+    "relatedName": "דניאל כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.798Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני עבודה",
+        "newValue": "",
+        "oldValue": "דיני עבודה"
+      }
+    ],
+    "changedFields": [
+      "legalField"
+    ]
+  },
+  {
+    "id": "d6307bc5-3f89-45d7-b81d-ea903916a904",
+    "relatedId": "3",
+    "relatedName": "רחל כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.802Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני נדל״ן",
+        "newValue": "",
+        "oldValue": "דיני נדל״ן"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "dc662c1b-46fc-448f-b471-aed23a7ac9b1",
+    "relatedId": "4",
+    "relatedName": "אביגיל לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.805Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני עבודה",
+        "newValue": "",
+        "oldValue": "דיני עבודה"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "2d452e76-63c7-4a87-9e29-918d11b13bcc",
+    "relatedId": "5",
+    "relatedName": "יעל כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.808Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני משפחה",
+        "newValue": "",
+        "oldValue": "דיני משפחה"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "b715997a-805a-4d62-a963-0d4516d3d780",
+    "relatedId": "6",
+    "relatedName": "מיכל לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.810Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני נדל״ן",
+        "newValue": "",
+        "oldValue": "דיני נדל״ן"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "2c13e6fa-8605-4090-a153-ba70dc9c8833",
+    "relatedId": "7",
+    "relatedName": "אילת כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.813Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני עבודה",
+        "newValue": "",
+        "oldValue": "דיני עבודה"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "78438009-2bb2-4e07-9982-d412b81a56fc",
+    "relatedId": "8",
+    "relatedName": "שרון לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.817Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני משפחה",
+        "newValue": "",
+        "oldValue": "דיני משפחה"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "980a2f29-caca-4b5a-be9f-dd3c6774afcd",
+    "relatedId": "9",
+    "relatedName": "דנה כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.819Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני עבודה",
+        "newValue": "",
+        "oldValue": "דיני עבודה"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "255d2c2c-73d9-4ad8-82ba-b533005a3e4d",
+    "relatedId": "10",
+    "relatedName": "מיה לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.822Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני משפחה",
+        "newValue": "",
+        "oldValue": "דיני משפחה"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "42fb944a-7529-4447-9d99-c4abddf4ac59",
+    "relatedId": "11",
+    "relatedName": "אילן כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.825Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני נדל״ן",
+        "newValue": "",
+        "oldValue": "דיני נדל״ן"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "7cbe895c-a7a7-465a-88d1-65c918b81343",
+    "relatedId": "12",
+    "relatedName": "שירה לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.828Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני עבודה",
+        "newValue": "",
+        "oldValue": "דיני עבודה"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "c6a1a96c-8826-4c85-9d61-9aad56f46d16",
+    "relatedId": "13",
+    "relatedName": "נועה כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.831Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני משפחה",
+        "newValue": "",
+        "oldValue": "דיני משפחה"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "a3cf9f97-a501-4833-9ac9-55b21ef96102",
+    "relatedId": "14",
+    "relatedName": "דניאלה לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.834Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני עבודה",
+        "newValue": "",
+        "oldValue": "דיני עבודה"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "eeff8146-4087-470d-88d8-1b213e114d5c",
+    "relatedId": "15",
+    "relatedName": "יעלה כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.837Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני משפחה",
+        "newValue": "",
+        "oldValue": "דיני משפחה"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "203063e1-b358-40e2-8c47-07ebd1e3f7f2",
+    "relatedId": "16",
+    "relatedName": "מיה לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.840Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני נדל״ן",
+        "newValue": "",
+        "oldValue": "דיני נדל״ן"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "bd6727c2-807d-41ef-8dce-b6e1bbbed0a0",
+    "relatedId": "17",
+    "relatedName": "אילן כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.844Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני עבודה",
+        "newValue": "",
+        "oldValue": "דיני עבודה"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "d2d3a1b3-ca23-42c9-8298-39f2a495ade4",
+    "relatedId": "18",
+    "relatedName": "שירה לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.847Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני עבודה",
+        "newValue": "",
+        "oldValue": "דיני עבודה"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "7f692650-9eca-4cba-a10b-01838b018943",
+    "relatedId": "19",
+    "relatedName": "נועה כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.850Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני משפחה",
+        "newValue": "",
+        "oldValue": "דיני משפחה"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "7427ed16-4c24-4403-b1aa-f0184027bb76",
+    "relatedId": "20",
+    "relatedName": "דניאלה לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T06:55:04.854Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "legalField",
+        "newDisplayValue": "",
+        "oldDisplayValue": "דיני עבודה",
+        "newValue": "",
+        "oldValue": "דיני עבודה"
+      },
+      {
+        "key": "status",
+        "newDisplayValue": "חדש",
+        "oldDisplayValue": "",
+        "newValue": "חדש",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "legalField",
+      "status"
+    ]
+  },
+  {
+    "id": "eb2df330-6add-4677-b108-36c438e081f4",
+    "relatedId": "21",
+    "relatedName": "נועם הניג",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.811Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "5a1de4bc-9734-4eab-9868-5c0d3d2af4d1",
+    "relatedId": "22",
+    "relatedName": "אביגיל כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.821Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "1caa0d03-93e8-4711-b6c1-bc3619936502",
+    "relatedId": "1",
+    "relatedName": "שרה לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.827Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "eb6a4eb8-82eb-466d-bef1-71b32378c3e1",
+    "relatedId": "2",
+    "relatedName": "דניאל כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.832Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "16116d0b-70a0-4657-965a-b86fc3bab87d",
+    "relatedId": "3",
+    "relatedName": "רחל כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.838Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "4e5a59c8-98ff-4393-a54d-fb378a16dded",
+    "relatedId": "4",
+    "relatedName": "אביגיל לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.843Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "60ffa97e-85d1-40df-9f12-e7bbea31d574",
+    "relatedId": "5",
+    "relatedName": "יעל כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.848Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "dba04ea6-be58-4f78-8487-efd06bd8d348",
+    "relatedId": "6",
+    "relatedName": "מיכל לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.854Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "24115df7-728b-4a86-b839-c10b01348b7b",
+    "relatedId": "7",
+    "relatedName": "אילת כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.859Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "f047a1c5-84d5-4430-a55e-636e87602dc5",
+    "relatedId": "8",
+    "relatedName": "שרון לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.865Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "3abd7029-4da4-4af6-b369-d052c8a339aa",
+    "relatedId": "9",
+    "relatedName": "דנה כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.869Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "bcc195c4-ab05-44e8-81c8-0cd5ca3e6c16",
+    "relatedId": "10",
+    "relatedName": "מיה לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.874Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "cdb28f5c-3546-4d15-b1b4-a4f5fa6d7d3f",
+    "relatedId": "11",
+    "relatedName": "אילן כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.879Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "3592d08c-51bb-472f-a3c6-de921df95dff",
+    "relatedId": "12",
+    "relatedName": "שירה לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.884Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "06f36708-c840-469b-937f-4af75fc91a98",
+    "relatedId": "13",
+    "relatedName": "נועה כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.888Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "1c395310-efaa-4b5b-9ca6-3cb9dbb80f80",
+    "relatedId": "14",
+    "relatedName": "דניאלה לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.893Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "cee6abfc-b8a9-41ed-970c-e1cec19d903e",
+    "relatedId": "15",
+    "relatedName": "יעלה כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.898Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "a9bf2fd8-64e3-43e8-a6d4-008157b74218",
+    "relatedId": "16",
+    "relatedName": "מיה לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.904Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "85b3d2f8-aa7c-4d89-bf18-4fce3c21a7da",
+    "relatedId": "17",
+    "relatedName": "אילן כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.909Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "413d4187-b134-4167-ae9f-c8bda00fe5e3",
+    "relatedId": "18",
+    "relatedName": "שירה לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.919Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "2688ee88-8acd-45b4-b096-6d64057c1a99",
+    "relatedId": "19",
+    "relatedName": "נועה כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.923Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "a559c55b-c718-49c7-b6f7-cbb673dff4a2",
+    "relatedId": "20",
+    "relatedName": "דניאלה לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:19:12.927Z",
+    "userId": "",
+    "userName": "",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "חדשה",
+        "oldDisplayValue": "חדש",
+        "newValue": "חדשה",
+        "oldValue": "חדש"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "61716c3f-8c2e-4689-bd12-e0435eb2a339",
+    "relatedId": "8",
+    "relatedName": "שרון לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:49:11.404Z",
+    "userId": "51819e6f-f985-464c-8869-4f08584b4a60",
+    "userName": "נועם",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "ממתינה לשיוך",
+        "oldDisplayValue": "חדשה",
+        "newValue": "ממתינה לשיוך",
+        "oldValue": "חדשה"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "c1c8f3f2-0d99-4f5a-9d1e-49288b4f2cc0",
+    "relatedId": "20",
+    "relatedName": "דניאלה לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:49:12.351Z",
+    "userId": "51819e6f-f985-464c-8869-4f08584b4a60",
+    "userName": "נועם",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "ממתינה לשיוך",
+        "oldDisplayValue": "חדשה",
+        "newValue": "ממתינה לשיוך",
+        "oldValue": "חדשה"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "3c113009-43f1-45b7-83cb-1897d02269d6",
+    "relatedId": "7",
+    "relatedName": "אילת כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:49:13.064Z",
+    "userId": "51819e6f-f985-464c-8869-4f08584b4a60",
+    "userName": "נועם",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "ממתינה לשיוך",
+        "oldDisplayValue": "חדשה",
+        "newValue": "ממתינה לשיוך",
+        "oldValue": "חדשה"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "3df9204c-c6a3-4bb3-af74-5325ac9e9ae4",
+    "relatedId": "15",
+    "relatedName": "יעלה כהן",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T07:49:14.817Z",
+    "userId": "51819e6f-f985-464c-8869-4f08584b4a60",
+    "userName": "נועם",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "נדחתה",
+        "oldDisplayValue": "חדשה",
+        "newValue": "נדחתה",
+        "oldValue": "חדשה"
+      }
+    ],
+    "changedFields": [
+      "status"
+    ]
+  },
+  {
+    "id": "5cb4ca0c-f5b7-410d-9e65-ded3d0bb7c72",
+    "relatedId": "0",
+    "relatedName": "שלמה כהן",
+    "entity": "VolunteerRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T08:03:24.994Z",
+    "userId": "51819e6f-f985-464c-8869-4f08584b4a60",
+    "userName": "נועם",
+    "changes": [
+      {
+        "key": "createdAt",
+        "newDisplayValue": "10:03",
+        "oldDisplayValue": "",
+        "newValue": "2023-12-07T08:03:24.994Z",
+        "oldValue": ""
+      },
+      {
+        "key": "name",
+        "newDisplayValue": "שלמה כהן",
+        "oldDisplayValue": "",
+        "newValue": "שלמה כהן",
+        "oldValue": ""
+      },
+      {
+        "key": "idNumber",
+        "newDisplayValue": "12345678",
+        "oldDisplayValue": "",
+        "newValue": "12345678",
+        "oldValue": ""
+      },
+      {
+        "key": "licenseNumber",
+        "newDisplayValue": "12345678",
+        "oldDisplayValue": "",
+        "newValue": "12345678",
+        "oldValue": ""
+      },
+      {
+        "key": "email",
+        "newDisplayValue": "shlomo@law.com",
+        "oldDisplayValue": "",
+        "newValue": "shlomo@law.com",
+        "oldValue": ""
+      },
+      {
+        "key": "phone",
+        "newDisplayValue": "050-789-4563",
+        "oldDisplayValue": "",
+        "newValue": "0507894563",
+        "oldValue": ""
+      },
+      {
+        "key": "city",
+        "newDisplayValue": "תל אביב",
+        "oldDisplayValue": "",
+        "newValue": "תל אביב",
+        "oldValue": ""
+      },
+      {
+        "key": "doYouHaveInsurance",
+        "newDisplayValue": "כן",
+        "oldDisplayValue": "",
+        "newValue": "כן",
+        "oldValue": ""
+      },
+      {
+        "key": "employer",
+        "newDisplayValue": "החברה של שלמה",
+        "oldDisplayValue": "",
+        "newValue": "החברה של שלמה",
+        "oldValue": ""
+      },
+      {
+        "key": "legalExpertise",
+        "newDisplayValue": [
+          "נזיקין (נזקי גוף ורכוש)",
+          "הכרה ממשלתית כנפגע פעולות איבה או הכרה של צה”ל בחייל כנכה צה”ל"
+        ],
+        "oldDisplayValue": "",
+        "newValue": [
+          "נזיקין (נזקי גוף ורכוש)",
+          "הכרה ממשלתית כנפגע פעולות איבה או הכרה של צה”ל בחייל כנכה צה”ל"
+        ],
+        "oldValue": ""
+      },
+      {
+        "key": "notes",
+        "newDisplayValue": "שמח להתנדב במקרים מסובכים",
+        "oldDisplayValue": "",
+        "newValue": "שמח להתנדב במקרים מסובכים",
+        "oldValue": ""
+      }
+    ],
+    "changedFields": [
+      "createdAt",
+      "name",
+      "idNumber",
+      "licenseNumber",
+      "email",
+      "phone",
+      "city",
+      "doYouHaveInsurance",
+      "employer",
+      "legalExpertise",
+      "notes"
+    ]
+  },
+  {
+    "id": "2d3c31cf-6287-44e8-b916-313092a5d956",
+    "relatedId": "8",
+    "relatedName": "שרון לוי",
+    "entity": "HelpRequests",
+    "appUrl": "",
+    "apiUrl": "",
+    "changeDate": "2023-12-07T09:04:06.447Z",
+    "userId": "51819e6f-f985-464c-8869-4f08584b4a60",
+    "userName": "נועם",
+    "changes": [
+      {
+        "key": "status",
+        "newDisplayValue": "שוייכה",
+        "oldDisplayValue": "ממתינה לשיוך",
+        "newValue": "שוייכה",
+        "oldValue": "ממתינה לשיוך"
+      },
+      {
+        "key": "volunteer",
+        "newDisplayValue": {
+          "id": 10,
+          "name": "אילן כהן",
+          "idNumber": "222222222",
+          "licenseNumber": "333333333",
+          "email": "ilan@law.com",
+          "phone": "0502222222",
+          "city": "רעננה",
+          "doYouHaveInsurance": "כן",
+          "employer": "משרד עורכי דין כהן",
+          "legalExpertise": [
+            "דיני עבודה",
+            "נזיקין (נזקי גוף ורכוש)",
+            "הכרה ממשלתית כנפגע פעולות איבה או הכרה של צה”ל בחייל כנכה צה”ל",
+            "תעבורה"
+          ],
+          "notes": "מוכן להתנדב במקרים דחופים"
+        },
+        "oldDisplayValue": null,
+        "newValue": null,
+        "oldValue": null
+      }
+    ],
+    "changedFields": [
+      "status",
+      "volunteer"
+    ]
+  }
+]
