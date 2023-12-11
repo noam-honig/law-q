@@ -63,12 +63,18 @@ export class HelpRequest extends EntityBase {
     validate: [Validators.required],
   })
   contactMethod = ''
-  @ValueListField(helpRequestStatuses, { caption: 'סטטוס' })
+  @ValueListField(helpRequestStatuses, {
+    caption: 'סטטוס',
+    includeInApi: Allow.authenticated,
+    allowApiUpdate: Allow.authenticated,
+  })
   status: (typeof helpRequestStatuses)[number] = 'חדשה'
 
   @Relations.toOne(() => Volunteer, {
     caption: 'מתנדב משוייך',
     allowNull: true,
+    includeInApi: Allow.authenticated,
+    allowApiUpdate: Allow.authenticated,
   })
   volunteer?: Volunteer
 }

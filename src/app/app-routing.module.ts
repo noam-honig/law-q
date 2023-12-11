@@ -1,7 +1,6 @@
 import { AuthenticatedGuard, CommonUIElementsModule } from 'common-ui-elements'
 import { NgModule, ErrorHandler } from '@angular/core'
 import { Routes, RouterModule } from '@angular/router'
-import { HomeComponent } from './home/home.component'
 
 import { UsersComponent } from './users/users.component'
 import { AdminGuard } from './users/AdminGuard'
@@ -14,9 +13,7 @@ import { AllVolunteerRequestsComponent } from './all-volunteer-requests/all-volu
 import { ProcessRequestsComponent } from './process-requests/process-requests.component'
 import { DevComponent } from './dev/dev.component'
 
-const defaultRoute = terms.home
 const routes: Routes = [
-  { path: defaultRoute, component: HomeComponent },
   {
     path: 'טיפול בבקשות',
     component: ProcessRequestsComponent,
