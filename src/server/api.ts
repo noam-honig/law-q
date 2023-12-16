@@ -15,6 +15,7 @@ import { Volunteer } from '../app/volunteer-request/volunteer-request'
 import { config } from 'dotenv'
 import { Pool } from 'pg'
 import { ChangeLog } from '../app/common/change-log/change-log'
+import { sendEmail } from './sendEmail'
 config() //loads the configuration from the .env file
 
 const entities = [User, HelpRequest, VersionInfo, Volunteer, ChangeLog]
@@ -32,5 +33,11 @@ export const api = remultExpress({
   initRequest,
   initApi: async () => {
     await versionUpdate()
+    if (false)
+      await sendEmail({
+        to: 'noam.honig@gmail.com',
+        text: 'testing 123',
+        subject: 'test subject',
+      })
   },
 })
