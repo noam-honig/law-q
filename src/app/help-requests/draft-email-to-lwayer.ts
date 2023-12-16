@@ -2,10 +2,11 @@ import { formatPhone, whatsappUrl } from '../common/fields/PhoneField'
 import { HelpRequest } from './HelpRequest'
 
 export function draftEmailToLawyer(r: HelpRequest) {
+  const email = 'legal.aid@israelbar.org.il'
+
   const startText = `${
     r.volunteer?.name || ''
   } שלום רב, אנו מודים לך על התנדבותך בפרויקט הסיוע המשפטי  עבור אלה הזקוקים לו. שייכנו אותך למתן סיוע ללקוח.ה המצוינים מטה. אנא צור עימו/עימה קשר באופן ישיר לצורך מענה על השאלה המפורטת מטה ועדכן אותנו בדבר סיום הטיפול בפניה במייל :`
-  const email = 'legal.aid@israelbar.org.il'
   const text = `${startText} ${email}
 נושא: ${r.title} (#${r.id})
 תיאור: ${r.description}
@@ -50,13 +51,17 @@ export function draftEmailToLawyer(r: HelpRequest) {
 }
 
 export function emailToPerson(r: HelpRequest) {
-  const title = `פנייתך ללשכת עורכי הדין, מספר ${r.id} בנושא ${r.title}`
+  const title = emailSubject(r)
   const body = messageToPerson(r)
   const emailLink = `mailto:${r.email}?subject=${encodeURIComponent(
     title
   )}&body=${encodeURIComponent(body)}`
   return emailLink
 }
+function emailSubject(r: HelpRequest) {
+  return `פנייתך ללשכת עורכי הדין, מספר ${r.id} בנושא ${r.title}`
+}
+
 export function messageToPerson(r: HelpRequest) {
   return `שלום ${r.name},
 בקשר לפניתך ללשכת עורכי הדין, מספר ${r.id} בנושא ${r.title},
