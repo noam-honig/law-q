@@ -9,13 +9,15 @@ import {
   PostgresSchemaWrapper,
   createPostgresSchemaDataProvider,
 } from './PostgresSchemaWrapper'
-import { SqlDatabase, remult } from 'remult'
+import { SqlDatabase, remult, repo } from 'remult'
 import { VersionInfo, versionUpdate } from './version'
 import { Volunteer } from '../app/volunteer-request/volunteer-request'
 import { config } from 'dotenv'
 import { Pool } from 'pg'
 import { ChangeLog } from '../app/common/change-log/change-log'
 import { sendEmail } from './sendEmail'
+import fs from 'fs'
+import { draftEmailToLawyer } from '../app/help-requests/draft-email-to-lwayer'
 config() //loads the configuration from the .env file
 
 const entities = [User, HelpRequest, VersionInfo, Volunteer, ChangeLog]
@@ -33,11 +35,14 @@ export const api = remultExpress({
   initRequest,
   initApi: async () => {
     await versionUpdate()
-    if (false)
-      await sendEmail({
-        to: 'noam.honig@gmail.com',
-        text: 'testing 123',
-        subject: 'test subject',
-      })
+    const r = await repo(HelpRequest).findFirst(
+      {},
+      {
+        include: {
+          volunteer: true,
+        },
+      }
+    )
+    fs.writeFileSync('./tmp/test.html', draftEmailToLawyer(r).html)
   },
 })

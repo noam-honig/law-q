@@ -9,6 +9,10 @@ import { openDialog } from '../common-ui-elements'
 import { AssignVolunteerComponent } from '../assign-volunteer/assign-volunteer.component'
 import { RowButton } from '../common-ui-elements/interfaces'
 import { UIToolsService } from '../common/UIToolsService'
+import {
+  emailToPerson,
+  messageToPerson,
+} from '../help-requests/draft-email-to-lwayer'
 
 @Component({
   selector: 'app-process-requests',
@@ -57,9 +61,7 @@ export class ProcessRequestsComponent implements OnInit {
     },
   ]
   messageToPerson(r: HelpRequest) {
-    return `שלום ${r.name},
-בקשר לפניתך מספר ${r.id} בנושא ${r.title},
-`
+    return messageToPerson(r)
   }
   messageToLawyer(r: HelpRequest) {
     return `שלום עו"ד ${r.volunteer!.name}, 
@@ -67,16 +69,11 @@ export class ProcessRequestsComponent implements OnInit {
     `
   }
   emailToPerson(r: HelpRequest) {
-    const title = `פנייתך ללשכת עורכי הדין, מספר ${r.id} בנושא ${r.title}`
-    const body = this.messageToPerson(r)
-    const emailLink = `mailto:${r.email}?subject=${encodeURIComponent(
-      title
-    )}&body=${encodeURIComponent(body)}`
-    return emailLink
+    return emailToPerson(r)
   }
   emailToLawyer(r: HelpRequest) {
     const title = `פנייה מספר ${r.id} בנושא ${r.title}`
-    const body = this.messageToPerson(r)
+    const body = messageToPerson(r)
     const emailLink = `mailto:${
       r.volunteer!.email
     }?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`
