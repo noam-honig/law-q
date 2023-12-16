@@ -17,7 +17,6 @@ export function ValueListField<entityType, valueType>(
       if (!f.value) return
       //is valid email
       if (!valueList.includes(f.value)) {
-        debugger
         throw Error('ערך לא חוקי: ' + f.value)
       }
     },
