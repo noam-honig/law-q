@@ -292,6 +292,10 @@ a:hover {
   background-color: var(--accent-color);  
 }
 
+.dark-bg .app-sidenav-container {
+  background: #0e1f36;
+}
+
 .full-page {
   height: 100%;
   display: flex;
