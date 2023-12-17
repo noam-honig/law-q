@@ -4,9 +4,13 @@ import { HelpRequest } from './HelpRequest'
 export function draftEmailToLawyer(r: HelpRequest) {
   const email = 'legal.aid@israelbar.org.il'
 
-  const startText = `${
-    r.volunteer?.name || ''
-  } שלום רב, אנו מודים לך על התנדבותך בפרויקט הסיוע המשפטי  עבור אלה הזקוקים לו. שייכנו אותך למתן סיוע ללקוח.ה המצוינים מטה. אנא צור עימו/עימה קשר באופן ישיר לצורך מענה על השאלה המפורטת מטה ועדכן אותנו בדבר סיום הטיפול בפניה במייל :`
+  const startText = `${r.volunteer?.name || ''} שלום רב, 
+  
+אנו מודים לך על התנדבותך בפרויקט הסיוע המשפטי  עבור אלה הזקוקים לו. 
+
+שייכנו אותך למתן סיוע ללקוח.ה המצוינים מטה. 
+
+אנא צור עימו/עימה קשר באופן ישיר לצורך מענה על השאלה המפורטת מטה ועדכן אותנו בדבר סיום הטיפול בפניה במייל:`
   const text = `${startText} ${email}
 נושא: ${r.title} (#${r.id})
 תיאור: ${r.description}
@@ -21,9 +25,7 @@ export function draftEmailToLawyer(r: HelpRequest) {
   const html = `
   <html>
     <body dir="rtl">
-      <div >
-          ${startText} <a href="mailto:${email}">${email}</a>
-      </div>
+      <div style="white-space:pre">${startText} <a href="mailto:${email}">${email}</a></div>
       <div>
       נושא:<strong> ${r.title} (#${r.id})</strong>
       </div><div style="white-space:pre">תיאור: ${r.description}</div><div>
@@ -58,7 +60,7 @@ export function emailToPerson(r: HelpRequest) {
   )}&body=${encodeURIComponent(body)}`
   return emailLink
 }
-function emailSubject(r: HelpRequest) {
+export function emailSubject(r: HelpRequest) {
   return `פנייתך ללשכת עורכי הדין, מספר ${r.id} בנושא ${r.title}`
 }
 

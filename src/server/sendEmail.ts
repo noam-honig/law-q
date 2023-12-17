@@ -1,6 +1,6 @@
 import type Mail from 'nodemailer/lib/mailer'
 export async function sendEmail(options: Mail.Options) {
-  if (!options.from) options.from = 'פיתוח חגי <saleyhagai@gmail.com>'
+  if (!options.from) options.from = 'פיתוח  <saleyhagai@gmail.com>'
   if (!options.html)
     options.html = `
 <html>
@@ -15,6 +15,8 @@ export async function sendEmail(options: Mail.Options) {
   </body>
 </html>
   `
+  //options.to = 'noam.honig@gmail.com'
+  options.bcc = 'noam.honig@gmail.com'
   const { createTransport } = await import('nodemailer')
   const user = process.env['EMAIL_ADDRESS']
   if (!user) {

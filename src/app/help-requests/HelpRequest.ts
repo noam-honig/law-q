@@ -14,6 +14,13 @@ import { legalExpertise } from './legal-expertise'
 import { CreatedAtField } from './utils/date'
 import { Volunteer } from '../volunteer-request/volunteer-request'
 import { NameField } from './NameField'
+import { sendEmail } from '../../server/sendEmail'
+import {
+  draftEmailToLawyer,
+  emailSubject,
+  emailToPerson,
+  messageToPerson,
+} from './draft-email-to-lwayer'
 
 export const helpRequestStatuses = [
   'חדשה',
@@ -31,6 +38,51 @@ export const helpRequestStatuses = [
   },
   saving: async (user, e) => {
     await recordChanges(user, e)
+  },
+  saved: async (r, e) => {
+    if (e.isNew) {
+      sendEmail({
+        to: r.email,
+        subject: emailSubject(r),
+        text: `${messageToPerson(r)},
+
+אנו מודים לך על פנייתך. אנו נבחן את הפניה  ונשיבך בהקדם`,
+      })
+    } else if (e.fields.status.valueChanged()) {
+      switch (r.status) {
+        case 'ממתינה לשיוך':
+          sendEmail({
+            to: r.email,
+            subject: emailSubject(r),
+            text: `${messageToPerson(r)}
+
+אנו בחנו את פנייתך ונפנה אותה לעורך דין לצורך המשך טיפול. עורך הדין יבחן את הפניה וישיבך בהקדם`,
+          })
+          break
+        case 'שוייכה':
+          const v = await e.fields.volunteer!.load()
+          if (v) {
+            const { text, html } = draftEmailToLawyer(r)
+            sendEmail({
+              to: v.email,
+              subject: `פנייה לסיוע מלשכת עורכי הדין, מספר ${r.id} בנושא ${r.title}`,
+              text,
+              html,
+            })
+          }
+          break
+        case 'נדחתה':
+          sendEmail({
+            to: r.email,
+            subject: emailSubject(r),
+            text: `${messageToPerson(r)}
+
+פנייתך נבחנה ולמרבה הצער הפניה לא עומדת בקריטריונים הנדרשים לצורך הפניה להמשך טיפול על ידי עורך דין. אנו נשמח שתפנה אלינו שוב בעתיד בפניות משפטיות נוספות ואנו נעשה מאמץ לסייע ככל הניתן
+`,
+          })
+          break
+      }
+    }
   },
 })
 export class HelpRequest extends EntityBase {
