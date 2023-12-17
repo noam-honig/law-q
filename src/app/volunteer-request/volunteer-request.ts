@@ -59,10 +59,10 @@ export class Volunteer extends EntityBase {
   @Fields.string({ caption: 'מעסיק', validate: [Validators.required] })
   employer = ''
   @Fields.json<Volunteer, string[]>({
-    caption: 'תחומי התמחות',
+    caption: 'תחומי עיסוק',
     validate: (_, f) => {
       if ((f.value?.length || 0) == 0)
-        throw Error('חובה לבחור לפחות תחום התמחות אחד')
+        throw Error('חובה לבחור לפחות תחום עיסוק אחד')
     },
   })
   legalExpertise: string[] = []

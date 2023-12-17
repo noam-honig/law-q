@@ -1,4 +1,6 @@
 <div>
-  <a [href]="whatsappUrl()" style="margin-right: 16px">whatsapp</a>
-  <a [href]="'tel:' + phone">{{ formattedPhone() }}</a>
+  <a [href]="whatsappUrl()" style="margin-right: 16px" target="_blank"
+    >whatsapp</a
+  >
+  <a [href]="'tel:' + phone" target="_blank">{{ formattedPhone() }}</a>
 </div>

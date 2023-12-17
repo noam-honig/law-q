@@ -44,7 +44,6 @@ export async function versionUpdate() {
   await version(5, async () => {
     for (const r of await repo(HelpRequest).find()) {
       r.status = 'חדשה'
-      r.legalField = ''
       await r.save()
     }
   })

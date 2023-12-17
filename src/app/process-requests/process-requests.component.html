@@ -14,7 +14,7 @@
     <mat-card *ngFor="let r of requests$ | async" class="event-card">
       <div style="display: flex">
         <div style="flex-grow: 1">
-          <strong>{{ r.title }}</strong>
+          <strong>{{ r.title }} (#{{ r.id }})</strong>
           <mat-card-subtitle
             >{{ r.name }} {{ r.city }} נשלחה ב:{{
               r.$.createdAt.displayValue
@@ -35,7 +35,7 @@
           [message]="messageToPerson(r)"
         ></app-display-phone>
         <div>
-          <a [href]="emailToPerson(r)">{{ r.email }}</a>
+          <a [href]="emailToPerson(r)" target="_blank">{{ r.email }}</a>
         </div>
         <div *ngIf="r.volunteer">
           <strong>עו"ד: {{ r.volunteer.name }}</strong>
@@ -44,7 +44,9 @@
             [message]="messageToLawyer(r)"
           ></app-display-phone>
           <div>
-            <a [href]="emailToLawyer(r)">{{ r.volunteer.email }}</a>
+            <a [href]="emailToLawyer(r)" target="_blank">{{
+              r.volunteer.email
+            }}</a>
           </div>
         </div>
       </mat-card-content>
