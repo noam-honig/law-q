@@ -32,7 +32,7 @@
       [mode]="uiService.isScreenSmall() ? 'over' : 'side'"
     >
       <div style="width: 100%; text-align: center"></div>
-      <h4 *ngIf="remult.authenticated()">
+      <h4 *ngIf="remult.authenticated()" style="margin: 20px 6px;">
         {{ terms.hello }} {{ remult.user!.name }}
       </h4>
       <mat-nav-list role="list">

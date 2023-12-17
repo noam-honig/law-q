@@ -1,21 +1,5 @@
-$dark-blue: #0e1f36;
-$dark-gray: #1f2636;
-$gold: #d39637;
-
-.mat-toolbar.mat-primary {
-  background: $dark-gray; 
-}
-
-.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
-  background-color: $gold;  
-}
-
 .active-route {
   background-color: #f2f2f2;
-}
-
-.mat-drawer-container {
-  background: $dark-blue;
 }
 
 .app-sidenav-container {

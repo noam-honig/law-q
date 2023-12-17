@@ -272,19 +272,25 @@ $altTheme: (
 html,
 body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-// a {
-//   background-color: transparent;
-//   color: var(--primary-color);
-//   text-decoration: none;
-// }
+a {
+  background-color: transparent;
+  color: var(--primary-color);
+  text-decoration: none;
+}
 
-// a:hover {
-//   background-color: transparent;
-//   color: var(--primary-color);
-//   text-decoration: underline;
-// }
+a:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+  background-color: var(--accent-color);  
+}
 
 .full-page {
   height: 100%;
