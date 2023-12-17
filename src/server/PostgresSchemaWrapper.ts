@@ -28,7 +28,7 @@ export function createPostgresSchemaDataProvider(args: {
       )
     )
   )
-  const sb = new PostgresSchemaBuilder(db, 'lawq')
+  const sb = new PostgresSchemaBuilder(db, args.schema)
   db.ensureSchema = (entities) => sb.ensureSchema(entities)
   return db
 }
