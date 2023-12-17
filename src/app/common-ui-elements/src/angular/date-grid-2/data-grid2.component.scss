@@ -60,13 +60,13 @@
 
 .dataGridHeaderCell,
 .dataGridDataCell {
-  padding: 4px;
+  padding: 14px 8px;
 }
 
 .dataGridHeaderCell {}
 
 .dataGridDataCell {
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #efefef;
 }
 
 .data-grid-row-more-buttons {
@@ -95,7 +95,7 @@
 }
 
 .dataGridFooterArea {
-  border: 1px solid #e0e0e0;
+  border: 1px solid #efefef;
 }
 
 .filterDialog {
