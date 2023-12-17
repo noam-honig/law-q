@@ -35,14 +35,14 @@ export const api = remultExpress({
   initRequest,
   initApi: async () => {
     await versionUpdate()
-    const r = await repo(HelpRequest).findFirst(
-      {},
-      {
-        include: {
-          volunteer: true,
-        },
-      }
-    )
-    fs.writeFileSync('./tmp/test.html', draftEmailToLawyer(r).html)
+    // const r = await repo(HelpRequest).findFirst(
+    //   {},
+    //   {
+    //     include: {
+    //       volunteer: true,
+    //     },
+    //   }
+    // )
+    // fs.writeFileSync('./tmp/test.html', draftEmailToLawyer(r).html)
   },
 })
