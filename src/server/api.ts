@@ -22,14 +22,17 @@ config() //loads the configuration from the .env file
 
 const entities = [User, HelpRequest, VersionInfo, Volunteer, ChangeLog]
 
+const DATABASE_URL = process.env['DATABASE_URL']
+
 export const api = remultExpress({
   entities,
   controllers: [SignInController, UpdatePasswordController],
   dataProvider: async () => {
-    if (!process.env['DATABASE_URL']) return undefined
+    if (!DATABASE_URL) return undefined
     return createPostgresSchemaDataProvider({
       schema: 'lawq',
-      connectionString: process.env['DATABASE_URL'],
+      connectionString: DATABASE_URL,
+      disableSsl: DATABASE_URL.indexOf('localhost') >= 0,
     })
   },
   initRequest,

@@ -16,12 +16,15 @@ export function createPostgresSchemaDataProvider(args: {
     new PostgresDataProvider(
       new PostgresSchemaWrapper(
         new Pool({
-          connectionString: process.env['DATABASE_URL'],
-          ssl: {
-            rejectUnauthorized: false, //needed for heroku
-          },
+          connectionString:
+            args.connectionString || process.env['DATABASE_URL'],
+          ssl: args.disableSsl
+            ? false
+            : {
+                rejectUnauthorized: false,
+              },
         }),
-        'lawq'
+        args.schema
       )
     )
   )
