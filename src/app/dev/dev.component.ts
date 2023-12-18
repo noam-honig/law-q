@@ -3,6 +3,7 @@ import { repo } from 'remult'
 import { HelpRequest } from '../help-requests/HelpRequest'
 import { openDialog } from '../common-ui-elements'
 import { AssignVolunteerComponent } from '../assign-volunteer/assign-volunteer.component'
+import { TermsComponent } from '../terms/terms.component'
 
 @Component({
   selector: 'app-dev',
@@ -15,10 +16,6 @@ export class DevComponent implements OnInit {
   ngOnInit(): void {
     repo(HelpRequest)
       .findFirst()
-      .then((r) =>
-        openDialog(AssignVolunteerComponent, (x) => {
-          x.r = r
-        })
-      )
+      .then((r) => openDialog(TermsComponent, (x) => {}))
   }
 }
