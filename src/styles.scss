@@ -293,7 +293,8 @@ a:hover {
 }
 
 .dark-bg .app-sidenav-container {
-  background: #0e1f36;
+  background: #0e1f36 url('assets/images/form-bg.jpg') no-repeat center;
+  background-size: cover;
 }
 
 .full-page {
@@ -320,8 +321,8 @@ a:hover {
 .table,
 th,
 td {
-  border: 1px solid #efefef;
-  padding: 16px 10px;
+  border: 1px solid #ddd;
+  padding: 10px 10px;
 }
 
 th {
