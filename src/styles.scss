@@ -279,17 +279,28 @@ body {
 a {
   background-color: transparent;
   color: var(--primary-color);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
   background-color: transparent;
-  color: var(--primary-color);
-  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+a[href^="tel:"] {
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
   background-color: var(--accent-color);  
+}
+
+.mat-card-actions .mat-button-base {
+  border: 1px solid #efefef;
 }
 
 .dark-bg .app-sidenav-container {
