@@ -4,7 +4,7 @@
   <h3 *ngIf="!r.isNew()">בקשתך נתקבלה ומספרה {{ r.id }}</h3>
   <data-area [settings]="area" *ngIf="r.isNew()"></data-area>
   <div>
-    <mat-checkbox [(ngModel)]="confirm">
+    <mat-checkbox [(ngModel)]="confirm" *ngIf="r.isNew()">
       אני מאשר/ת שהפרטים המוזנים נכונים ומסכים/ה
       <a (click)="showTerms()">לתנאי השימוש</a>
     </mat-checkbox>
