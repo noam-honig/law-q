@@ -35,10 +35,12 @@ import { VolunteerRequestComponent } from './volunteer-request/volunteer-request
 import { MatChipsModule } from '@angular/material/chips'
 import { AllHelpRequestsComponent } from './all-help-requests/all-help-requests.component'
 import { AllVolunteerRequestsComponent } from './all-volunteer-requests/all-volunteer-requests.component'
-import { ProcessRequestsComponent } from './process-requests/process-requests.component';
-import { AssignVolunteerComponent } from './assign-volunteer/assign-volunteer.component';
-import { DevComponent } from './dev/dev.component';
+import { ProcessRequestsComponent } from './process-requests/process-requests.component'
+import { AssignVolunteerComponent } from './assign-volunteer/assign-volunteer.component'
+import { DevComponent } from './dev/dev.component'
 import { DisplayPhoneComponent } from './display-phone/display-phone.component'
+import { MarkdownModule } from 'ngx-markdown'
+import { TermsComponent } from './terms/terms.component'
 
 @NgModule({
   declarations: [
@@ -61,6 +63,7 @@ import { DisplayPhoneComponent } from './display-phone/display-phone.component'
     AssignVolunteerComponent,
     DevComponent,
     DisplayPhoneComponent,
+    TermsComponent,
   ],
   imports: [
     BrowserModule,
@@ -81,6 +84,7 @@ import { DisplayPhoneComponent } from './display-phone/display-phone.component'
     MatIconModule,
     MatMenuModule,
     CommonUIElementsModule,
+    MarkdownModule.forRoot(),
   ],
   providers: [
     UIToolsService,

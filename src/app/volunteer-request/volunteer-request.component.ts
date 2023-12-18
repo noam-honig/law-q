@@ -3,6 +3,8 @@ import { Volunteer } from './volunteer-request'
 import { repo } from 'remult'
 import { DataAreaSettings } from '../common-ui-elements/interfaces'
 import { legalExpertise } from '../help-requests/legal-expertise'
+import { openDialog } from '../common-ui-elements'
+import { TermsComponent } from '../terms/terms.component'
 
 @Component({
   selector: 'app-volunteer-request',
@@ -22,9 +24,34 @@ export class VolunteerRequestComponent implements OnInit {
       ),
   })
   legalExpertise = legalExpertise
+  confirm = false
   ngOnInit(): void {}
   async submit() {
+    if (!this.confirm) {
+      throw 'אנא אשר/י את תנאי השימוש'
+    }
     await this.r.save()
+  }
+  showTerms() {
+    openDialog(
+      TermsComponent,
+      (x) =>
+        (x.terms = `
+ידוע לי כי אני רשאי לשתף אחרים אודות התנדבותי במסגרת תוכנית הסיוע המשפטי של לשכת עורכי הדין (להלן: "**התכנית**"). אולם, כל מידע בנוגע ללקוח ולפניה שביצע לקבלת סיוע משפטי (להלן בהתאמה: "**הלקוח**"; "**הפניה**") הינו מידע חסוי החוסה תחת חיסיון "עורך דין-לקוח". "מידע חסוי", הינו מידע אשר, בין היתר:
+
+- מידע מזהה אודות הלקוח, לרבות שמו, כתובת מגוריו או פרטי התקשרות עימו;
+
+- מידע אודות בני משפחתו;
+
+- כל מידע אחר שעשוי או באופן סביר צפוי לחשוף את זהות הלקוח;
+
+- מידע בקשר עם הפניה.
+
+אני מצהיר ומתחייב כי לא אמסור לאחר מידע חסוי ללא קבלת אישור מראש ובכתב מהלקוח, בכפוף למגבלות כל דין.
+
+אני מצהיר ומאשר כי עבודתי בתוכנית היא התנדבותית, על כל המשתמע בכך, לרבות בחינת הפניות שאקבל מהלשכה, החלטתי אם לסרב לטפל בפניות ו/או לטפל בפניות לגופן, היקף הטיפול ותוכנו. עבודתי זו (ואף לאחר מכן) תהיה תחת אחריותי המקצועית והבלעדית, וכי ידוע לי שלשכת עורכי הדין לא תהא אחראית על כל טענה שיעלה לקוח בקשר לטיפול בפנייתו. הריני מתחייב כי אם תעלה טענה ו/או תוגש תביעה ו/או דרישה נגד לשכת עורכי הדין בגין עניין הקשור לפנייה ולאופן הטיפול או הסירוב לטפל בה, אני אשפה את הלשכה מיד עם דרישתה הראשונה בגין כל נזק ו/או הוצאה ו/או הפסד שיגרמו לה בקשר לאמור, בכפוף למתן פסק דין חלוט שמטיל אחריות על הלשכה בגין האמור.
+    `)
+    )
   }
   toggleExpertise(e: string) {
     if (this.r.legalExpertise.includes(e)) {

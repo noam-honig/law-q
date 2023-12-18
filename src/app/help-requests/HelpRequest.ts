@@ -44,9 +44,9 @@ export const helpRequestStatuses = [
       sendEmail({
         to: r.email,
         subject: emailSubject(r),
-        text: `${messageToPerson(r)},
-
-אנו מודים לך על פנייתך. אנו נבחן את הפניה  ונשיבך בהקדם`,
+        text: `שלום ${r.name},
+קיבלנו את פניתך לקבלת מענה משפטי. 
+אנו נבחן את הפניה ונשיבך בהקדם.`,
       })
     } else if (e.fields.status.valueChanged()) {
       switch (r.status) {
@@ -54,9 +54,8 @@ export const helpRequestStatuses = [
           sendEmail({
             to: r.email,
             subject: emailSubject(r),
-            text: `${messageToPerson(r)}
-
-אנו בחנו את פנייתך ונפנה אותה לעורך דין לצורך המשך טיפול. עורך הדין יבחן את הפניה וישיבך בהקדם`,
+            text: `שלום ${r.name},
+בחנו את פנייתך לקבלת מענה משפטי והפנינו אותה לעורך דין לצורך מענה. עורך הדין יבחן את הפניה וישיבך בהקדם.`,
           })
           break
         case 'שוייכה':
@@ -75,10 +74,8 @@ export const helpRequestStatuses = [
           sendEmail({
             to: r.email,
             subject: emailSubject(r),
-            text: `${messageToPerson(r)}
-
-פנייתך נבחנה ולמרבה הצער הפניה לא עומדת בקריטריונים הנדרשים לצורך הפניה להמשך טיפול על ידי עורך דין. אנו נשמח שתפנה אלינו שוב בעתיד בפניות משפטיות נוספות ואנו נעשה מאמץ לסייע ככל הניתן
-`,
+            text: `שלום ${r.name},
+פנייתך לקבלת מענה משפטי נבחנה ולמרבה הצער הפניה אינה קשורה למלחמת "חרבות ברזל" ועל כן לא נוכל להפנות אותה להמשך טיפול על ידי עורך דין. נשמח שתפנה אלינו שוב בעתיד בפניות משפטיות נוספות בקשר עם מלחמת "חרבות ברזל" ואנו נעשה מאמץ לסייע ככל הניתן.`,
           })
           break
       }
