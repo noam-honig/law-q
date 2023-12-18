@@ -280,11 +280,11 @@ a {
   background-color: transparent;
   color: var(--primary-color);
   text-decoration: underline;
-}
-
-a:hover {
-  background-color: transparent;
-  color: var(--accent-color);
+  
+  &:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+  }
 }
 
 a[href^="tel:"] {
