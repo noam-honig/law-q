@@ -17,7 +17,13 @@
      margin-right: 10px;
   }
 
-  button {
+  .home-card__button {
+    border-radius: 16px;
+    padding: 3px 50px 3px 10px;
+    background-image: url(/assets/images/arrow.svg);
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 35px auto;
     margin-top: 20px;
     width: 100%;
     color: black;
