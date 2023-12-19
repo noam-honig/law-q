@@ -15,7 +15,7 @@ ${options.text
   </html>
   `
   //options.to = 'noam.honig@gmail.com'
-  options.bcc = 'noam.honig@gmail.com'
+  //options.bcc = 'noam.honig@gmail.com'
   const { createTransport } = await import('nodemailer')
   const user = process.env['EMAIL_ADDRESS']
   const host = process.env['EMAIL_SERVER']

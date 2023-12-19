@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { Fields, getFields, repo } from 'remult'
 import { DataAreaSettings } from '../common-ui-elements/interfaces'
 import { HelpRequest } from '../help-requests/HelpRequest'
+import { BackgroundColorService } from '../services/background-color.service'
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,13 @@ import { HelpRequest } from '../help-requests/HelpRequest'
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor(private globalStyleService: BackgroundColorService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.globalStyleService.addGlobalStyle()
+  }
+
+  ngOnDestroy() {
+    this.globalStyleService.removeGlobalStyle()
+  }
 }

@@ -12,8 +12,13 @@ import { AllHelpRequestsComponent } from './all-help-requests/all-help-requests.
 import { AllVolunteerRequestsComponent } from './all-volunteer-requests/all-volunteer-requests.component'
 import { ProcessRequestsComponent } from './process-requests/process-requests.component'
 import { DevComponent } from './dev/dev.component'
+import { HomeComponent } from './home/home.component'
 
 const routes: Routes = [
+  {
+    path: 'בית',
+    component: HomeComponent,
+  },
   {
     path: 'טיפול בבקשות',
     component: ProcessRequestsComponent,
@@ -44,7 +49,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '/' + HelpRequestsComponent.route,
+    redirectTo: '/בית',
     pathMatch: 'full',
   },
 ]
