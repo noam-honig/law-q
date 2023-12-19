@@ -1,10 +1,21 @@
+.home-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .home-card {
-  min-width: 300px;
+  width: 100%;
   max-width: 400px;
   margin-top: 20px;
   border-radius: 0;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
+  
+  @media only screen and (min-width: 920px) {
+     margin-left: 10px;
+     margin-right: 10px;
+  }
 
   button {
     margin-top: 20px;
