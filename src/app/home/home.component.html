@@ -1,11 +1,24 @@
-<div style="display: flex; justify-content: center">
+<div class="home-intro">
+
+  <div class="home-intro__inner">
+    <h2>Lorem ipsum dolor sit amet</h2>
+    
+    <p>Maecenas sed diam eget risus varius blandit sit amet non magna. 
+    Nullam quis risus eget urna mollis ornare vel eu leo. 
+    Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac 
+    consectetur ac, vestibulum at eros.</p>
+  </div>
+  
+</div>
+
+<div class="home-cards-container">
   <mat-card class="home-card">
     <h2>Have a legal question?</h2>
 
     After your question is reviewed, we will connect you with a licensed
     attorney to help resolve your questions.
-    <button mat-raised-button color="primary" routerLink="/path/to/route">
-      <div><span>Ask a question</span><span>---></span></div>
+    <button mat-raised-button color="primary" routerLink="/path/to/route" class="home-card__button">
+      <div><span>Ask a question</span></div>
     </button>
   </mat-card>
   <mat-card class="home-card">
@@ -13,8 +26,8 @@
 
     You will help answer legal questions based on your practice area of
     expertise.
-    <button mat-raised-button color="primary" routerLink="/path/to/route">
-      <div><span>Sign up to volunteer</span><span>---></span></div>
+    <button mat-raised-button color="primary" routerLink="/path/to/route" class="home-card__button">
+      <div><span>Sign up to volunteer</span></div>
     </button>
   </mat-card>
 </div>
