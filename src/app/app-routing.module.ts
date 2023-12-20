@@ -35,7 +35,11 @@ const routes: Routes = [
     canActivate: [AuthenticatedGuard],
   },
   { path: HelpRequestsComponent.route, component: HelpRequestsComponent },
-  { path: 'הרשמה כעו"ד מתנדב', component: VolunteerRequestComponent },
+  {
+    path: 'volunteer',
+    component: VolunteerRequestComponent,
+    data: { name: 'הרשמה כעו"ד מתנדב' },
+  },
   {
     path: terms.userAccounts,
     component: UsersComponent,
