@@ -1,5 +1,9 @@
 import { remultExpress } from 'remult/remult-express'
-import { PostgresDataProvider, PostgresSchemaBuilder } from 'remult/postgres'
+import {
+  PostgresDataProvider,
+  PostgresSchemaBuilder,
+  createPostgresDataProvider,
+} from 'remult/postgres'
 import { User } from '../app/users/user'
 import { SignInController } from '../app/users/SignInController'
 import { UpdatePasswordController } from '../app/users/UpdatePasswordController'
@@ -23,17 +27,22 @@ config() //loads the configuration from the .env file
 const entities = [User, HelpRequest, VersionInfo, Volunteer, ChangeLog]
 
 const DATABASE_URL = process.env['DATABASE_URL']
-
+const DATABASE_SCHEMA = process.env['DATABASE_SCHEMA']
 export const api = remultExpress({
   entities,
   controllers: [SignInController, UpdatePasswordController],
   dataProvider: async () => {
     if (!DATABASE_URL) return undefined
-    return createPostgresSchemaDataProvider({
-      schema: 'lawq',
-      connectionString: DATABASE_URL,
-      disableSsl: DATABASE_URL.indexOf('localhost') >= 0,
-    })
+    if (!DATABASE_SCHEMA)
+      return createPostgresDataProvider({
+        configuration: 'heroku',
+      })
+    else
+      return createPostgresSchemaDataProvider({
+        schema: 'lawq',
+        connectionString: DATABASE_URL,
+        disableSsl: DATABASE_URL.indexOf('localhost') >= 0,
+      })
   },
   initRequest,
   initApi: async () => {
