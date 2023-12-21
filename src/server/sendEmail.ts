@@ -20,13 +20,19 @@ ${options.text
   const user = process.env['EMAIL_ADDRESS']
   const host = process.env['EMAIL_SERVER']
   const pass = process.env['EMAIL_PASSWORD']
+  const connection = process.env['EMAIL_OPTIONS']
   if (!user) {
     const message = 'email user not defined'
     console.log(message)
     return message
   }
   if (!options.from) options.from = `לשכת עורכי הדין  <${user}>`
-  const connectionOptions = !host
+  const connectionOptions = connection
+    ? {
+        auth: { user, pass },
+        ...JSON.parse(connection),
+      }
+    : !host
     ? {
         host: 'smtp.gmail.com',
         port: 465,
@@ -45,7 +51,14 @@ ${options.text
           pass,
         },
       }
-  const transport = createTransport(connectionOptions)
+
+  console.log(
+    'email options',
+    JSON.stringify(connectionOptions, undefined, 2).replace(pass!, '***')
+  )
+  const transport = createTransport({
+    ...connectionOptions,
+  })
   try {
     return await new Promise<string>((res) => {
       transport.sendMail(options, (error, info) => {

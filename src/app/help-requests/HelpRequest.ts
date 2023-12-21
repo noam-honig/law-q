@@ -10,17 +10,11 @@ import { PhoneField } from '../common/fields/PhoneField'
 import { EmailField } from '../common/fields/EmailField'
 import { ValueListField } from '../common/fields/ValueListField'
 import { recordChanges } from '../common/change-log/change-log'
-import { legalExpertise } from './legal-expertise'
 import { CreatedAtField } from './utils/date'
 import { Volunteer } from '../volunteer-request/volunteer-request'
 import { NameField } from './NameField'
 import { sendEmail } from '../../server/sendEmail'
-import {
-  draftEmailToLawyer,
-  emailSubject,
-  emailToPerson,
-  messageToPerson,
-} from './draft-email-to-lwayer'
+import { draftEmailToLawyer, emailSubject } from './draft-email-to-lwayer'
 
 export const helpRequestStatuses = [
   'חדשה',

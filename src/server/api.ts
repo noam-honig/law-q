@@ -38,14 +38,14 @@ export const api = remultExpress({
   initRequest,
   initApi: async () => {
     await versionUpdate()
-    if (false)
-      sendEmail({
-        to: 'noam.honig@gmail.com',
-        subject: 'המערכת עולה',
-        text: `
+
+    sendEmail({
+      to: ['noam.honig@gmail.com'],
+      subject: 'המערכת עולה',
+      text: `
 הי נועם
 רק רציתי לעדכן שהמערכת של לשכת עורכי הדין עלתה, וששליחת המייל הצליחה
       `,
-      })
+    })
   },
 })
