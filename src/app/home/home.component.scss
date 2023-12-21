@@ -1,12 +1,63 @@
-.home-intro {
-  text-align: center;
+.home-top-bar {
   background: white;
   margin: 0 -10px;
+  height: 120px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1), 0px 0px 4px 0px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+  
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    // height: 10px;
+    height: 52px;
+    background: #21283A;
+  }
+}
+
+.home-top-bar__logo {
+   width: 255px; 
+   position: relative;
+   z-index: 2;
+}
+
+.home-intro {
+  background: #F9F9F9;
+  margin: 0 -10px;
+  padding-top: 20px;
   position: relative;
   z-index: 1;
+}
 
+.home-intro__inner {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 2em 65px;
+
+  @media only screen and (max-width: 920px) {
+    padding: 18px 2em 72px 2em;
+  }
+}
+
+.home-intro::before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 120px;
+  background: url(/assets/images/hands-heart.svg) center no-repeat;
+  background-size: contain;
+  margin: 40px auto 20px;
+}
+
+.home-intro__inner__text {
   h2 {
     font-size: 26px;
+    text-align: center;
 
     @media only screen and (min-width: 920px) {
       margin-bottom: 20px;
@@ -15,6 +66,7 @@
   }
 
   p {
+    text-align: center;
     font-size: 18px;
     line-height: 1.3;
 
@@ -24,29 +76,50 @@
   }
 }
 
-.home-intro__inner {
-  max-width: 1000px;
-  margin: auto;
-  padding: 95px 2em;
-
-  @media only screen and (max-width: 920px) {
-    padding: 18px 2em 72px 2em;
+.home-intro__letter {
+  background: white;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1), 0px 0px 4px 0px rgba(0, 0, 0, 0.05);
+  
+  @media only screen and (min-width: 760px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+   
+  @media only screen and (min-width: 920px) {
+    padding: 48px;
   }
 }
 
-.home-intro::after {
-  content: "";
-  display: block;
-  width: 150px;
-  height: 150px;
-  background: url(/assets/images/hands-heart.svg) center no-repeat;
-  position: absolute;
-  bottom: calc(-150px / 2);
-  left: calc(50% - 150px/2);
+.home-intro__letter__image {
+  width: 128px;
+  flex-shrink: 0;
+  text-align: center;
+  margin: 0 auto 20px;
+  
+  img {
+    width: 128px;
+    border-radius: 198px;
+  }
+  
+  @media only screen and (min-width: 760px) {
+    display: flex;
+    align-items: center;
+    margin: 0 30px 0 0;
+    width: 198px;
+    
+    img {
+       width: 198px 
+    }
+  }
 }
 
 .home-cards-container {
-  padding: 95px 0 25px;
+  padding: 65px 0 65px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
