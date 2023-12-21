@@ -49,7 +49,7 @@ export const api = remultExpress({
     await versionUpdate()
 
     sendEmail({
-      to: ['noam.honig@gmail.com'],
+      to: ['noam.honig@gmail.com', 'assaf.r@israelbar.org.il'],
       subject: 'המערכת עולה',
       text: `
 הי נועם
