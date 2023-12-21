@@ -44,7 +44,7 @@
   }
 }
 
-.home-intro::before {
+.home-intro-top::before {
   content: "";
   display: block;
   width: 120px;
@@ -163,6 +163,7 @@
   color: white;
   text-align: center;
   text-decoration: none;
+  margin: 20px;
 
   :hover {
     text-decoration: underline;
