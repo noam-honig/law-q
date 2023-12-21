@@ -44,6 +44,7 @@ ${options.text
       }
     : {
         host,
+
         port: 25,
         secure: false,
         auth: {
@@ -52,7 +53,7 @@ ${options.text
         },
       }
 
-  connectionOptions.proxy = 'socks5://127.0.0.1:2025'
+  // connectionOptions.proxy = 'socks5://127.0.0.1:2025'
   console.log(
     'email options',
     JSON.stringify(connectionOptions, undefined, 2).replace(pass!, '***')
