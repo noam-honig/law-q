@@ -1,5 +1,5 @@
 import type Mail from 'nodemailer/lib/mailer'
-export async function sendEmail(options: Mail.Options) {
+export async function sendEmail(options: Mail.Options, context: string) {
   if (!options.html)
     options.html = `
 <html>
@@ -65,7 +65,7 @@ ${options.text
         if (error) res(error.message)
         else if (info.response.includes(' OK ')) res('OK')
         else res(info.response)
-        console.log({ error, info })
+        console.log({ error, info, subject: options.subject, context })
       })
     })
   } finally {

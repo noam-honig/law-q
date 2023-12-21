@@ -35,42 +35,54 @@ export const helpRequestStatuses = [
   },
   saved: async (r, e) => {
     if (e.isNew) {
-      sendEmail({
-        to: r.email,
-        subject: emailSubject(r),
-        text: `שלום ${r.name},
+      sendEmail(
+        {
+          to: r.email,
+          subject: emailSubject(r),
+          text: `שלום ${r.name},
 קיבלנו את פניתך לקבלת מענה משפטי. 
 אנו נבחן את הפניה ונשיבך בהקדם.`,
-      })
+        },
+        'requestId:' + e.id.toString() + ' ' + r.status
+      )
     } else if (e.fields.status.valueChanged()) {
       switch (r.status) {
         case 'ממתינה לשיוך':
-          sendEmail({
-            to: r.email,
-            subject: emailSubject(r),
-            text: `שלום ${r.name},
+          sendEmail(
+            {
+              to: r.email,
+              subject: emailSubject(r),
+              text: `שלום ${r.name},
 בחנו את פנייתך לקבלת מענה משפטי והפנינו אותה לעורך דין לצורך מענה. עורך הדין יבחן את הפניה וישיבך בהקדם.`,
-          })
+            },
+            'requestId:' + e.id.toString() + ' ' + r.status
+          )
           break
         case 'שוייכה':
           const v = await e.fields.volunteer!.load()
           if (v) {
             const { text, html } = draftEmailToLawyer(r)
-            sendEmail({
-              to: v.email,
-              subject: `פנייה לסיוע מלשכת עורכי הדין, מספר ${r.id} בנושא ${r.title}`,
-              text,
-              html,
-            })
+            sendEmail(
+              {
+                to: v.email,
+                subject: `פנייה לסיוע מלשכת עורכי הדין, מספר ${r.id} בנושא ${r.title}`,
+                text,
+                html,
+              },
+              'requestId:' + e.id.toString() + ' ' + r.status + ' לעורך הדין'
+            )
           }
           break
         case 'נדחתה':
-          sendEmail({
-            to: r.email,
-            subject: emailSubject(r),
-            text: `שלום ${r.name},
+          sendEmail(
+            {
+              to: r.email,
+              subject: emailSubject(r),
+              text: `שלום ${r.name},
 פנייתך לקבלת מענה משפטי נבחנה ולמרבה הצער הפניה אינה קשורה למלחמת "חרבות ברזל" ועל כן לא נוכל להפנות אותה להמשך טיפול על ידי עורך דין. נשמח שתפנה אלינו שוב בעתיד בפניות משפטיות נוספות בקשר עם מלחמת "חרבות ברזל" ואנו נעשה מאמץ לסייע ככל הניתן.`,
-          })
+            },
+            'requestId:' + e.id.toString() + ' ' + r.status
+          )
           break
       }
     }

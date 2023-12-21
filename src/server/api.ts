@@ -54,13 +54,16 @@ export const api = remultExpress({
       .then((y) => y.json())
       .then((x) => console.log(x.ip))
 
-    sendEmail({
-      to: ['noam.honig@gmail.com', 'assaf.r@israelbar.org.il'],
-      subject: 'המערכת עולה',
-      text: `
+    sendEmail(
+      {
+        to: ['noam.honig@gmail.com', 'assaf.r@israelbar.org.il'],
+        subject: 'המערכת עולה',
+        text: `
 הי נועם
 רק רציתי לעדכן שהמערכת של לשכת עורכי הדין עלתה, וששליחת המייל הצליחה
       `,
-    })
+      },
+      'server started'
+    )
   },
 })
