@@ -48,6 +48,12 @@ export const api = remultExpress({
   initApi: async () => {
     await versionUpdate()
 
+    const fetch = await import('node-fetch')
+    fetch
+      .default('https://api.ipify.org?format=json')
+      .then((y) => y.json())
+      .then((x) => console.log(x.ip))
+
     sendEmail({
       to: ['noam.honig@gmail.com', 'assaf.r@israelbar.org.il'],
       subject: 'המערכת עולה',
