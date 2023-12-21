@@ -65,7 +65,11 @@ ${options.text
         if (error) res(error.message)
         else if (info.response.includes(' OK ')) res('OK')
         else res(info.response)
-        console.log({ error, info, subject: options.subject, context })
+        console.log(JSON.stringify(info, undefined, 2), {
+          error,
+          subject: options.subject,
+          context,
+        })
       })
     })
   } finally {

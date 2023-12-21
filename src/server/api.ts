@@ -57,7 +57,7 @@ export const api = remultExpress({
     sendEmail(
       {
         to: ['noam.honig@gmail.com', 'assaf.r@israelbar.org.il'],
-        subject: 'המערכת עולה',
+        subject: 'המערכת עולה בדיקה חדשה',
         text: `
 הי נועם
 רק רציתי לעדכן שהמערכת של לשכת עורכי הדין עלתה, וששליחת המייל הצליחה
