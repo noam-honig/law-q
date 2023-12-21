@@ -1,4 +1,5 @@
 import type Mail from 'nodemailer/lib/mailer'
+import socks from 'socks'
 export async function sendEmail(options: Mail.Options, context: string) {
   if (!options.html)
     options.html = `
@@ -59,6 +60,7 @@ ${options.text
   const transport = createTransport({
     ...connectionOptions,
   })
+  transport.set('proxy_socks_module', socks)
   try {
     return await new Promise<string>((res) => {
       transport.sendMail(options, (error, info) => {
