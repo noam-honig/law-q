@@ -53,17 +53,18 @@ export const api = remultExpress({
       .default('https://api.ipify.org?format=json')
       .then((y) => y.json())
       .then((x) => console.log(x.ip))
-
-    sendEmail(
-      {
-        to: ['noam.honig@gmail.com', 'assaf.r@israelbar.org.il'],
-        subject: 'המערכת עולה בדיקה חדשה',
-        text: `
+    if (process.env['SEND_STARTUP_EMAIL']) {
+      sendEmail(
+        {
+          to: ['noam.honig@gmail.com', 'assaf.r@israelbar.org.il'],
+          subject: 'המערכת עולה בדיקה חדשה',
+          text: `
 הי נועם
 רק רציתי לעדכן שהמערכת של לשכת עורכי הדין עלתה, וששליחת המייל הצליחה
       `,
-      },
-      'server started'
-    )
+        },
+        'server started'
+      )
+    }
   },
 })
