@@ -5,6 +5,7 @@ import { PhoneField } from '../common/fields/PhoneField'
 import { ValueListField } from '../common/fields/ValueListField'
 import { recordChanges } from '../common/change-log/change-log'
 import { CreatedAtField } from '../help-requests/utils/date'
+import { sendEmail } from '../../server/sendEmail'
 
 @Entity<Volunteer>('Volunteers', {
   allowApiCrud: Allow.authenticated,
@@ -15,6 +16,20 @@ import { CreatedAtField } from '../help-requests/utils/date'
   },
   saving: async (self, e) => {
     await recordChanges(self, e)
+  },
+  saved: async (r, e) => {
+    if (e.isNew) {
+      sendEmail(
+        {
+          to: r.email,
+          subject: `אישור קבלת פניתך להתנדבות`,
+          text: `שלום עו"ד ${r.name},
+          קיבלנו את פניתך להתנדב לצורך מתן מענה משפטי לאזרחים בקשר עם מלחמת "חרבות ברזל".
+          אנו נפנה אליך בקשות למענה משפטי בתחום התמחותך.`,
+        },
+        'volunteer id:' + e.id.toString() + ' '
+      )
+    }
   },
 })
 export class Volunteer extends EntityBase {
